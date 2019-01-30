@@ -1,0 +1,48 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.20'
+}
+
+group 'ro.readme'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://github.com/psiegman/mvn-repo/raw/master/releases'
+    }
+    maven {
+        url 'http://jcenter.bintray.com'
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile "org.jetbrains.kotlin:kotlin-reflect"
+
+    compile 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
+
+    compile 'org.jsoup:jsoup:1.11.3'
+
+    compile "org.bouncycastle:bcprov-jdk15:1.44"
+    compile "org.bouncycastle:bcmail-jdk15:1.44"
+    compile 'org.apache.pdfbox:pdfbox:2.0.13'
+
+    compile 'nl.siegmann.epublib:epublib-core:3.1'
+
+    compile 'org.apache.commons:commons-compress:1.18'
+
+    compile 'org.apache.commons:commons-collections4:4.2'
+
+    compile 'org.apache.commons:commons-lang3:3.8.1'
+
+    compile 'org.mariadb.jdbc:mariadb-java-client:2.2.3'
+
+    compile 'org.reflections:reflections:0.9.11'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
