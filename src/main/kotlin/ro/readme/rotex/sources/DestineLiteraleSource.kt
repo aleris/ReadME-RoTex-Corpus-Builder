@@ -1,6 +1,7 @@
 package ro.readme.rotex.sources
 
 import org.jsoup.Jsoup
+import ro.readme.rotex.retrySocketTimeoutException
 import ro.readme.rotex.skipFileIfExists
 import ro.readme.rotex.utils.PathUtils
 import ro.readme.rotex.utils.PdfTextExtractor
@@ -18,20 +19,23 @@ class DestineLiteraleSource: Source {
             val href = link.attr("href")
             val fileName = TextCleaner(href.substring("DestineLiterare/RevistePDF/".length)).stripForSafeFileName().cleaned
             print("$fileName ... ")
-            val destinationFilePath = PathUtils.originalFilePath(sourceKey, "$fileName.epub")
+            val destinationFilePath = PathUtils.originalFilePath(sourceKey, fileName)
             skipFileIfExists(destinationFilePath, override) {
-                try {
-                    val bytes = Jsoup.connect("http://www.scriitoriiromani.com/$href")
-                        .timeout(60 * 1000)
-                        .maxBodySize(6 * 1024 * 1024)
-                        .ignoreContentType(true)
-                        .execute()
-                        .bodyAsBytes()
-                    destinationFilePath.toFile().writeBytes(bytes)
-                    println("OK")
-                } catch (e: Exception) {
-                    println("ERR")
-                    e.printStackTrace()
+                retrySocketTimeoutException(3) {
+                    try {
+                        val bytes = Jsoup.connect("http://www.scriitoriiromani.com/$href")
+                            .timeout(60 * 1000)
+                            .maxBodySize(60 * 1024 * 1024)
+                            .ignoreContentType(true)
+                            .execute()
+                            .bodyAsBytes()
+                        destinationFilePath.toFile().writeBytes(bytes)
+                        println("OK")
+                    } catch (e: Exception) {
+                        println("ERR")
+                        e.printStackTrace()
+
+                    }
                 }
             }
         }

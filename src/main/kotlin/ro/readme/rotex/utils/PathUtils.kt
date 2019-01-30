@@ -5,13 +5,6 @@ import java.nio.file.Path
 import java.nio.file.Paths
 
 object PathUtils {
-    fun textFilePath(sourceKey: String): Path =
-        Paths.get(
-            ConfigProperties.dataDirectoryPath,
-            ConfigProperties.textDirectoryName,
-            "$sourceKey.txt"
-        )
-
     fun originalDirectoryPath(sourceKey: String): Path =
         Paths.get(
             ConfigProperties.dataDirectoryPath,
@@ -54,6 +47,21 @@ object PathUtils {
             subDirectoryName1,
             subDirectoryName2,
             subDirectoryName3,
+            fileName
+        )
+
+    fun textFilePath(sourceKey: String): Path =
+        Paths.get(
+            ConfigProperties.dataDirectoryPath,
+            ConfigProperties.textDirectoryName,
+            "$sourceKey.txt"
+        )
+
+    fun textFileIntermediaryPath(sourceKey: String, fileName: String): Path =
+        Paths.get(
+            ConfigProperties.dataDirectoryPath,
+            ConfigProperties.textDirectoryName,
+            ".$sourceKey",
             fileName
         )
 

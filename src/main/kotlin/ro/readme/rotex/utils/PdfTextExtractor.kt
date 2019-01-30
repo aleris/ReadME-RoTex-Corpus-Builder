@@ -5,10 +5,10 @@ import org.apache.pdfbox.text.PDFTextStripper
 import ro.readme.rotex.ConfigProperties
 import java.io.File
 import java.io.PrintWriter
-import java.nio.file.Paths
 
 
-class PdfTextExtractor(private val redoOCR: Boolean = false,
+class PdfTextExtractor(private val forceOCR: Boolean = false,
+                       private val redoOCR: Boolean = false,
                        private val additionalTextClean: ((text: String) -> String)? = null,
                        private val minimumPages: Int = 0,
                        private val checkInRomanian: Boolean = false): TextExtractor() {
@@ -25,11 +25,12 @@ class PdfTextExtractor(private val redoOCR: Boolean = false,
         print("${inputFile.name} ... ")
 
         try {
-            if (redoOCR) {
-                ocrFile(inputFile)
+            var useInputFile = inputFile
+            if (forceOCR or redoOCR) {
+                useInputFile = ocrFile(inputFile, forceOCR, redoOCR, Runtime.getRuntime().availableProcessors())
             }
 
-            PDDocument.load(inputFile).use { doc ->
+            PDDocument.load(useInputFile).use { doc ->
                 val pageCount = doc.pages.count
                 if (minimumPages <= pageCount) {
                     val repeatedMap = buildRepeatedLinesMap(doc)
@@ -148,40 +149,62 @@ class PdfTextExtractor(private val redoOCR: Boolean = false,
         return repeatedHap.filter { me -> threshold < me.value }
     }
 
-    private fun stripMappedLine(line: String) = line
+    private fun stripMappedLine(line: String) = line.toLowerCase()
         .replace(Regex("^(?:\\d *)+", RegexOption.MULTILINE), "")
         .replace(Regex("(?:\\d *)+$", RegexOption.MULTILINE), "")
         .replace(Regex("\\s(?:\\d *)+\\s", RegexOption.MULTILINE), "")
         .replace(Regex("(?:\\d *)+\\s+(?:\\d *)+", RegexOption.MULTILINE), "")
         .replace(Regex("[IVXLCDM]+", RegexOption.MULTILINE), "")
 
-    private fun ocrFile(inputFile: File) {
-        println()
-        println("Applying OCR ... ")
-
+    private fun ocrFile(inputFile: File, forceOCR: Boolean, redoOCR: Boolean, jobCount: Int): File {
         val dataDirectoryFile = File(ConfigProperties.dataDirectoryPath)
 
         val relativeFilePath = inputFile
             .relativeTo(dataDirectoryFile)
             .toPath().toString()
 
-        val outputFile = Paths.get(inputFile.parent, inputFile.nameWithoutExtension + "-ocr." + inputFile.extension)
+        val outputFile = PathUtils.textFileIntermediaryPath(inputFile.parentFile.name, inputFile.name)
             .toFile()
+        if (outputFile.exists()) {
+            return outputFile
+        }
+
+        println()
+        println("Applying OCR ... ")
+
+        outputFile.parentFile.mkdirs()
+
         val relativeOutputPath = outputFile
             .relativeTo(dataDirectoryFile)
             .toPath().toString()
 
-        val process = ProcessBuilder("docker", "run", "--rm", "-v", "${ConfigProperties.dataDirectoryPath}:/home/docker",
-            "ocrmypdf", "-l", "ron", "--jobs", "4", "--force-ocr", "--remove-vectors",
+        val params = arrayListOf("docker", "run", "--rm",
+            "-v", "${ConfigProperties.dataDirectoryPath}:/home/docker",
+            "ocrmypdf",
+            "-l", "ron",
+            "--jobs", jobCount.toString()//,
+            //"--remove-vectors"//,
+//            "--clean-final"//,
+            //"--optimize", "3"
+        )
+
+        if (forceOCR) {
+            params.add("--force-ocr")
+        }
+
+        if (redoOCR) {
+            params.add("--redo-ocr")
+        }
+
+        val process = ProcessBuilder(*params.toTypedArray(),
             relativeFilePath,
             relativeOutputPath
         ).start()
 
+        val errorStringBuilder = StringBuilder()
         process.errorStream.bufferedReader().lines().forEach {
             println(it)
-            if (it.contains("ERROR")) {
-                throw Exception(it)
-            }
+            errorStringBuilder.appendln(it)
         }
         process.inputStream.bufferedReader().lines().forEach {
             println(it)
@@ -189,13 +212,12 @@ class PdfTextExtractor(private val redoOCR: Boolean = false,
 
         process.waitFor()
 
-        if (outputFile.exists()) {
-            val beforeForceOcrFile = Paths.get(inputFile.parent, ".beforeforceocr", inputFile.name).toFile()
-            beforeForceOcrFile.parentFile.mkdirs()
-            inputFile.renameTo(beforeForceOcrFile)
-            outputFile.renameTo(inputFile)
+        if (errorStringBuilder.contains("ERROR")) {
+            throw Exception(errorStringBuilder.toString())
         }
 
         println("OCR OK")
+
+        return outputFile
     }
 }

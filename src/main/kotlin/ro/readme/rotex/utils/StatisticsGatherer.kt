@@ -1,5 +1,8 @@
 package ro.readme.rotex.utils
 
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import ro.readme.rotex.sources.AllSource
 import ro.readme.rotex.sources.Source
 import java.io.BufferedReader
@@ -8,19 +11,24 @@ import java.io.FileReader
 class StatisticsGatherer {
     fun get(sources: List<Source>, includeAll: Boolean = true): List<StatisticsData> {
         val statisticsDataList = ArrayList<StatisticsData>()
-        for (source in sources) {
-            val statisticsData = get(source)
-            if (null != statisticsData) {
-                statisticsDataList.add(statisticsData)
-            } else {
-                println("${source.sourceKey} text file does not exists, skipping.")
-                println()
+        runBlocking {
+            for (source in sources) {
+                launch(Dispatchers.IO) {
+                    val statisticsData = get(source)
+                    if (null != statisticsData) {
+                        statisticsDataList.add(statisticsData)
+                        println("Computing for ${source.sourceKey} OK")
+                    } else {
+                        println("${source.sourceKey} text file does not exists, skipping.")
+                    }
+                }
             }
         }
         if (includeAll) {
             val all = totalOf(statisticsDataList)
             statisticsDataList.add(all)
         }
+        println()
         return statisticsDataList
     }
 
@@ -60,7 +68,7 @@ class StatisticsGatherer {
                             .map { it.getCoveredText(lineString) }
                             .filter { TextUtils.hasOnlyLetters(it) }
                         wordCount += allLettersOnly.size
-                        allLettersOnly.forEach { wordSet.add(it) }
+                        wordSet.addAll(allLettersOnly)
                         lineString = reader.readLine()
                     }
                 }

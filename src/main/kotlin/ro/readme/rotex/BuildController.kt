@@ -2,7 +2,6 @@ package ro.readme.rotex
 
 import org.apache.commons.compress.archivers.tar.TarArchiveOutputStream
 import org.apache.commons.compress.compressors.gzip.GzipCompressorOutputStream
-import org.apache.commons.compress.utils.IOUtils
 import ro.readme.rotex.sources.*
 import java.nio.file.Files
 import org.reflections.Reflections
@@ -18,13 +17,17 @@ class BuildController {
         return@lazy sourceClasses.map {
             val source = it.kotlin.createInstance()
             BuildSource(source)
-        }
+        }.filter { it.source.sourceKey != AllSource().sourceKey }
     }
 
     private fun runBuildSources(list: List<BuildSource>) {
         println("ReadME RoTex Corpus Build")
+        println()
+
         for (buildSource in list) {
-            println("Running build source on ${buildSource.source.sourceKey}:")
+            println()
+            println(buildSource.source.sourceKey)
+            println("".padEnd(buildSource.source.sourceKey.length, '-'))
             downloadOriginal(buildSource.source, buildSource.options)
 
             extractText(buildSource.source, buildSource.options)
@@ -33,17 +36,17 @@ class BuildController {
             println("Build ${buildSource.source.sourceKey} OK")
         }
 
-//        println("Gathering statistics...")
-//        DexDictionary.ensureLoaded()
-//        println()
-//
-//        val statisticsGatherer = StatisticsGatherer()
-//        val statisticsDataList = statisticsGatherer.get(list.map { it.source })
-//        statisticsGatherer.printTable(statisticsDataList.sortedBy { it.totalWordCount })
-//
-//        println()
-//        println()
-//        println("ReadME RoTex Corpus Build DONE")
+        println("Gathering statistics...")
+        DexDictionary.ensureLoaded()
+        println()
+
+        val statisticsGatherer = StatisticsGatherer()
+        val statisticsDataList = statisticsGatherer.get(list.map { it.source })
+        statisticsGatherer.printTable(statisticsDataList.sortedBy { it.totalWordCount })
+
+        println()
+        println()
+        println("ReadME RoTex Corpus Build DONE")
     }
 
     fun run(list: List<BuildSourceConfig>) {
@@ -56,17 +59,18 @@ class BuildController {
     }
 
     fun run() {
-        runBuildSources(listOf(
-            JustSource()
-        ).map { BuildSource(it) })
-        // , BuildSourceOptions(checkOverrideDeep = true)
+//        runBuildSources(listOf(
+//            DcepSource()
+//        ).map { BuildSource(it) })
+//         , BuildSourceOptions(checkOriginalDeep = true)
 
-//        runBuildSources(allBuildSources)
+        runBuildSources(allBuildSources)
     }
 
     private fun downloadOriginal(source: Source, options: BuildSourceOptions) {
+        println("[DOWNLOAD] ${source.sourceKey}")
         if (!options.override &&
-            !options.checkOverrideDeep &&
+            !options.checkOriginalDeep &&
             PathUtils.originalDirectoryPath(source.sourceKey).toFile().exists()) {
             println("${source.sourceKey} exists, skipping download without deep checking")
             return
@@ -75,31 +79,35 @@ class BuildController {
     }
 
     private fun extractText(source: Source, options: BuildSourceOptions) {
+        println("[EXTRACT] ${source.sourceKey}")
         source.extractText(options.override)
     }
 
     private fun compressInSourceTextDirectory(source: Source, options: BuildSourceOptions) {
         val sourceKey = source.sourceKey
         val filePath = PathUtils.textFilePath(sourceKey)
-        val destinationPath = PathUtils.compressedTextFilePath(sourceKey)
-        print("Compressing to $destinationPath ... ")
-        skipFileIfExists(destinationPath, options.override) {
-            destinationPath.toFile().parentFile.mkdirs()
-            Files.newOutputStream(destinationPath).use { fo ->
-                GzipCompressorOutputStream(fo).use { gzo ->
-                    TarArchiveOutputStream(gzo).use { o ->
-                        val file = filePath.toFile()
-                        val entry = o.createArchiveEntry(file, file.name)
-                        o.putArchiveEntry(entry)
-                        Files.newInputStream(filePath).use { i ->
-                            i.copyTo(o)
+        if (filePath.toFile().exists()) {
+            val destinationPath = PathUtils.compressedTextFilePath(sourceKey)
+            println("[COMPRESS] ${source.sourceKey}")
+            print("Compressing to $destinationPath ... ")
+            skipFileIfExists(destinationPath, options.override) {
+                destinationPath.toFile().parentFile.mkdirs()
+                Files.newOutputStream(destinationPath).use { fo ->
+                    GzipCompressorOutputStream(fo).use { gzo ->
+                        TarArchiveOutputStream(gzo).use { o ->
+                            val file = filePath.toFile()
+                            val entry = o.createArchiveEntry(file, file.name)
+                            o.putArchiveEntry(entry)
+                            Files.newInputStream(filePath).use { i ->
+                                i.copyTo(o)
+                            }
+                            o.closeArchiveEntry()
+                            o.finish()
                         }
-                        o.closeArchiveEntry()
-                        o.finish()
                     }
                 }
+                println("OK")
             }
-            println("OK")
         }
     }
 }

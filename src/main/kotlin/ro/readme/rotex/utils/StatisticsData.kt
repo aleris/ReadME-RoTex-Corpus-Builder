@@ -26,20 +26,13 @@ data class StatisticsData(val source: Source,
 
     companion object {
         fun printMarkDownHeader() {
-            println("Source Key | Source Link | Uncompressed size | Compressed size | Word Count | Types Count | DEX Coverage | Download")
+            println("Source | Word Count | Types Count | DEX Coverage | Uncompressed size | Compressed size")
+            println("--- | --- | --- | --- | --- | ---")
         }
     }
 
     fun printMarkDownRow() {
-        print(source.sourceKey)
-        print(" | ")
-        print(source.originalLink)
-        print(" | ")
-        print(source.downloadLink)
-        print(" | ")
-        print("${TextUtils.formatDecimal(fileSizeUncompressed / (1000 * 1000))} MB (${TextUtils.formatDecimal(fileSizeUncompressed)} bytes)")
-        print(" | ")
-        print("${TextUtils.formatDecimal(fileSizeCompressed / (1000 * 1000))} MB (${TextUtils.formatDecimal(fileSizeCompressed)} bytes)")
+        print("${source.sourceKey} [➭](${source.originalLink} \"View source site\")")
         print(" | ")
         print(TextUtils.formatDecimal(totalWordCount))
         print(" | ")
@@ -49,9 +42,11 @@ data class StatisticsData(val source: Source,
         val typesCountAlsoInDex = wordSet.count { DexDictionary.containsWord(it) }
         val typesCountTotalInDex = DexDictionary.wordCount
         val typesInDexPercent = TextUtils.formatPercent(typesCountAlsoInDex.toDouble() * 100 / typesCountTotalInDex)
-        print("$typesInDexPercent (${TextUtils.formatDecimal(typesCountAlsoInDex)} of ${TextUtils.formatDecimal(typesCountTotalInDex)})")
+        print("$typesInDexPercent (${TextUtils.formatDecimal(typesCountAlsoInDex)})")
         print(" | ")
-        print("[Download](${source.downloadLink})")
+        print("${TextUtils.formatDecimal(fileSizeUncompressed / (1000 * 1000))} MB")
+        print(" | ")
+        print("${TextUtils.formatDecimal(fileSizeCompressed / (1000 * 1000))} MB [▼Download](${source.downloadLink} \"Download compressed file\")")
         println()
     }
 }

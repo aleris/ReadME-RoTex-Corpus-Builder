@@ -27,11 +27,11 @@ object DexDictionary {
     }
 
     fun ensureLoaded() {
-        println("There are ${wordsTrie.size} word forms in dictionary.")
+        println("There are ${TextUtils.formatDecimal(wordsTrie.size)} word forms in dictionary.")
     }
 
     private fun loadWordsTrieFromFile(wordsTrieFile: File): PatriciaTrie<Void> {
-        print("Loading words trie from ${wordsTrieFile.absolutePath} ... ")
+        print("Loading word forms trie from ${wordsTrieFile.absolutePath} ... ")
         val wordsTrie: PatriciaTrie<Void> = SerializationUtils.deserialize(wordsTrieFile.inputStream())
         println("OK")
         return wordsTrie
