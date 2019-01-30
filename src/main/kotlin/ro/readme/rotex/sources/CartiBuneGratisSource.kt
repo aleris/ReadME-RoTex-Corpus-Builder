@@ -9,7 +9,7 @@ import java.lang.Exception
 class CartiBuneGratisSource: Source {
     override val sourceKey = "carti-bune-gratis"
     override val originalLink = "http://cartibunegratis.blogspot.ro"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1DwnMXUsvbcLZSZPMLJ9GB9HEC9Mv1_c3"
 
     override fun downloadOriginal(override: Boolean) {
         val pageDoc =

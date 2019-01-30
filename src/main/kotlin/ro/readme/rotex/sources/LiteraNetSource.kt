@@ -11,7 +11,7 @@ import ro.readme.rotex.utils.TextCleaner
 class LiteraNetSource: Source {
     override val sourceKey = "litera-net"
     override val originalLink = "http://editura.liternet.ro/catalog/1/Romana/toate-cartile.html"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1jbAjDqiiM9axfnA8k-afLnuweOSAEdOh"
 
     override fun downloadOriginal(override: Boolean) {
         val pageDoc = Jsoup.connect("http://editura.liternet.ro/catalog/1/Romana/toate-cartile.html").get()

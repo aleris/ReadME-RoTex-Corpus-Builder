@@ -14,7 +14,7 @@ import java.nio.file.Paths
 class BibliorSource: Source {
     override val sourceKey = "biblior"
     override val originalLink = "http://biblior.net/carti"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1nPpJdXbCAL13a2yIM9PgJiIXxZeRzGDF"
 
     override fun downloadOriginal(override: Boolean) {
         val linksPageDoc = Jsoup.connect("http://biblior.net/carti").get()

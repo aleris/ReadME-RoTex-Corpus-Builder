@@ -11,7 +11,7 @@ import java.nio.file.Paths
 class BziSource: Source {
     override val sourceKey = "bzi"
     override val originalLink = "https://www.bzi.ro/arhiva"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1kDHgid2dNdEL9oYQSQJiCjBAw4r9gFLQ"
 
     override fun downloadOriginal(override: Boolean) {
         val yearsPageDoc = Jsoup.connect("https://www.bzi.ro/arhiva/").get()

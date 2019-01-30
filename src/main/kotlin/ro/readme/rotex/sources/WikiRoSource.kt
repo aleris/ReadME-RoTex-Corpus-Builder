@@ -15,7 +15,7 @@ import javax.xml.parsers.SAXParserFactory
 class WikiRoSource: Source {
     override val sourceKey = "wiki-ro"
     override val originalLink = "https://dumps.wikimedia.org/rowiki/latest/rowiki-latest-pages-meta-current.xml.bz2"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1UGxDkF_EzSOiie_vs8uio3_FSr6_SL-7"
 
     override fun downloadOriginal(override: Boolean) {
         val destinationFilePath = PathUtils.originalFilePath(sourceKey,"rowiki-latest-pages-meta-current.xml.bz2")

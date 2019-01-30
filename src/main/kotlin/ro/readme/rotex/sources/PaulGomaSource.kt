@@ -11,7 +11,7 @@ import java.nio.file.Paths
 class PaulGomaSource: Source {
     override val sourceKey = "paul-goma"
     override val originalLink = "http://www.paulgoma.com/lista-completa"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1DPEssf7eHCml0jCsvGORsfHEhaAWyNyj"
 
     override fun downloadOriginal(override: Boolean) {
         val linksPageDoc = Jsoup.connect("http://www.paulgoma.com/lista-completa/").get()

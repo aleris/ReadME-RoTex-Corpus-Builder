@@ -10,7 +10,7 @@ import ro.readme.rotex.utils.TextCleaner
 class DestineLiteraleSource: Source {
     override val sourceKey = "destine-literale"
     override val originalLink = "http://www.scriitoriiromani.com/DestineLiterare.html"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1cBnAKvgMihuG_xiL3jTO8_bBTY9R43Ri"
 
     override fun downloadOriginal(override: Boolean) {
         val indexDoc = Jsoup.connect("http://www.scriitoriiromani.com/DestineLiterare.html").get()

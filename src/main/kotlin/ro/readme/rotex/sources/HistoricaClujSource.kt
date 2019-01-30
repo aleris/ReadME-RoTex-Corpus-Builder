@@ -10,7 +10,7 @@ import ro.readme.rotex.utils.PdfTextExtractor
 class HistoricaClujSource: Source {
     override val sourceKey = "historica-cluj"
     override val originalLink = "http://www.historica-cluj.ro/menu/arhiva_anuar.php"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1FW4S4Mv0OriX8zMyNZzrCU3gc0ajmXLg"
 
     override fun downloadOriginal(override: Boolean) {
         val yearsPageDoc = Jsoup.connect("http://www.historica-cluj.ro/menu/arhiva_anuar.php").get()

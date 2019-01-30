@@ -11,7 +11,7 @@ class BestsellerMDSource: Source {
 
     override val sourceKey = "bestseller-md"
     override val originalLink = "https://www.bestseller.md"
-    override val downloadLink = "https://drive.google.com/open?id=1PvUXcnvPo6dOyA8L6lCuqbsAvlWp3BeV&export=download"
+    override val downloadLink = "https://drive.google.com/open?id=1PvUXcnvPo6dOyA8L6lCuqbsAvlWp3BeV"
 
     override fun downloadOriginal(override: Boolean) {
         for (page in 1..8) {

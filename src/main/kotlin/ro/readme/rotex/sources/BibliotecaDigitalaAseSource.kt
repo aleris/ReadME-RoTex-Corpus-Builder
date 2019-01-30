@@ -25,7 +25,7 @@ import java.util.HashMap
 class BibliotecaDigitalaAseSource: Source {
     override val sourceKey = "biblioteca-digitala-ase"
     override val originalLink = "http://www.biblioteca-digitala.ase.ro/biblioteca"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1VPg0vrflrCQWS6coytOZR2LndjXroFQM"
 
     override fun downloadOriginal(override: Boolean) {
         for (letter in 'A'..'Z') {

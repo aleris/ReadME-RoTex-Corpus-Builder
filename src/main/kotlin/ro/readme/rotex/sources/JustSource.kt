@@ -15,7 +15,7 @@ import java.io.File
 class JustSource: Source {
     override val sourceKey = "just"
     override val originalLink = "http://legislatie.just.ro/Public/RezultateCautare?page=1"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1o89XyGGpHeif3eRycfT_SZYHdUpautBO"
 
     override fun downloadOriginal(override: Boolean) = runBlocking {
         for (page in 1..17630) {

@@ -11,7 +11,7 @@ import ro.readme.rotex.utils.TextCleaner
 class Ru101Books: Source {
     override val sourceKey = "ru-101-books"
     override val originalLink = "http://www.101books.ru/"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1Hlbu0i8dgKjDhXL-LYZP-eEy9dEIshoB"
 
     override fun downloadOriginal(override: Boolean) {
         for (page in 1..107) {
