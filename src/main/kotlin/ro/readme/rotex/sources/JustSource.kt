@@ -91,9 +91,10 @@ class JustSource: Source {
                         .forEach { file ->
                             print("${file.name} ... ")
                             val doc = Jsoup.parse(file, Charsets.UTF_8.name(), "")
-                            val text = doc.select("body").text()
-                            val clened = TextCleaner(text).correctCedilaDiacritics().cleaned
-                            printWriter.println(clened)
+                            val text = doc.select(".S_DEN,.S_PAR,.S_EMT_TTL,.S_EMT_BDY,.S_PUB_TTL,.S_PUB_BDY,.S_ART_TTL")
+                                .joinToString("\n") { it.text() }
+                            val cleaned = TextCleaner(text).correctCedilaDiacritics().cleaned
+                            printWriter.println(cleaned)
                             printWriter.println()
                             println("OK")
                         }

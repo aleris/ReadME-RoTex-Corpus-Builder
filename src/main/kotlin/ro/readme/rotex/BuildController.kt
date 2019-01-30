@@ -27,10 +27,10 @@ class BuildController {
             println("Running build source on ${buildSource.source.sourceKey}:")
             downloadOriginal(buildSource.source, buildSource.options)
 
-//            extractText(buildSource.source, buildSource.options)
-//
-//            compressInSourceTextDirectory(buildSource.source, buildSource.options)
-//            println("Build ${buildSource.source.sourceKey} OK")
+            extractText(buildSource.source, buildSource.options)
+
+            compressInSourceTextDirectory(buildSource.source, buildSource.options)
+            println("Build ${buildSource.source.sourceKey} OK")
         }
 
 //        println("Gathering statistics...")
@@ -58,7 +58,7 @@ class BuildController {
     fun run() {
         runBuildSources(listOf(
             JustSource()
-        ).map { BuildSource(it, BuildSourceOptions(checkOverrideDeep = true)) })
+        ).map { BuildSource(it) })
         // , BuildSourceOptions(checkOverrideDeep = true)
 
 //        runBuildSources(allBuildSources)
