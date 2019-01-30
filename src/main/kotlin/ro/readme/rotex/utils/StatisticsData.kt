@@ -26,7 +26,7 @@ data class StatisticsData(val source: Source,
 
     companion object {
         fun printMarkDownHeader() {
-            println("Source | Word Count | Types Count | DEX Coverage | Uncompressed size | Compressed size")
+            println("Source | Word Count (¹) | Types Count (²) | DEX Coverage (³) | Uncompressed size | Compressed size")
             println("--- | --- | --- | --- | --- | ---")
         }
     }

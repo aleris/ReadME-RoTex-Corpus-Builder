@@ -1,11 +1,13 @@
 package ro.readme.rotex
 
+import org.apache.commons.compress.archivers.tar.TarArchiveEntry
 import org.apache.commons.compress.archivers.tar.TarArchiveOutputStream
 import org.apache.commons.compress.compressors.gzip.GzipCompressorOutputStream
 import ro.readme.rotex.sources.*
 import java.nio.file.Files
 import org.reflections.Reflections
 import ro.readme.rotex.utils.*
+import java.nio.file.Paths
 import kotlin.reflect.full.createInstance
 
 
@@ -35,6 +37,8 @@ class BuildController {
             compressInSourceTextDirectory(buildSource.source, buildSource.options)
             println("Build ${buildSource.source.sourceKey} OK")
         }
+
+        buildAllCompressedFile()
 
         println("Gathering statistics...")
         DexDictionary.ensureLoaded()
@@ -94,20 +98,58 @@ class BuildController {
                 destinationPath.toFile().parentFile.mkdirs()
                 Files.newOutputStream(destinationPath).use { fo ->
                     GzipCompressorOutputStream(fo).use { gzo ->
-                        TarArchiveOutputStream(gzo).use { o ->
+                        TarArchiveOutputStream(gzo).use { tar ->
                             val file = filePath.toFile()
-                            val entry = o.createArchiveEntry(file, file.name)
-                            o.putArchiveEntry(entry)
+                            val entry = tar.createArchiveEntry(file, file.name)
+                            tar.putArchiveEntry(entry)
                             Files.newInputStream(filePath).use { i ->
-                                i.copyTo(o)
+                                i.copyTo(tar)
                             }
-                            o.closeArchiveEntry()
-                            o.finish()
+                            tar.closeArchiveEntry()
+                            tar.finish()
                         }
                     }
                 }
                 println("OK")
             }
+        }
+    }
+
+    private fun buildAllCompressedFile() {
+        val source = AllSource()
+        println()
+        println("[COMPRESS] ${source.sourceKey}")
+        val destinationPath = PathUtils.compressedTextFilePath(source.sourceKey)
+        skipFileIfExists(destinationPath, false) {
+            val destinationFile = destinationPath.toFile()
+            destinationFile.outputStream().use { outputStream ->
+                GzipCompressorOutputStream(outputStream).use { gzo ->
+                    TarArchiveOutputStream(gzo).use { tar ->
+                        val entry = TarArchiveEntry("${source.sourceKey}.txt")
+
+                        val files = Paths.get(
+                            ConfigProperties.dataDirectoryPath,
+                            ConfigProperties.textDirectoryName
+                        ).toFile()
+                            .listFiles()
+                            .filter { it.extension == "txt" }
+                            .sorted()
+
+                        entry.size = files.fold(0L) { a, f -> a + f.length()}
+
+                        tar.putArchiveEntry(entry)
+
+                        files.forEach { file ->
+                            print("${file.name} ... ")
+                            file.inputStream().copyTo(tar)
+                            println("OK")
+                        }
+                        tar.closeArchiveEntry()
+                        tar.finish()
+                    }
+                }
+            }
+            println("OK")
         }
     }
 }

@@ -40,7 +40,7 @@ and as a single big file containing the entire text.
 
 Sources ordered by total word count in document:
 
-Source | Word Count | Types Count | DEX Coverage | Uncompressed size | Compressed size
+Source | Word Count (¹) | Types Count (²) | DEX Coverage (³) | Uncompressed size | Compressed size
 --- | --- | --- | --- | --- | ---
 biblior [➭](http://biblior.net/carti "View source site") | 1.181.820 | 89.642 | 5,9% (72.298) | 7 MB | 2 MB [▼Download](https://drive.google.com/open?id=1nPpJdXbCAL13a2yIM9PgJiIXxZeRzGDF "Download compressed file")
 carti-bune-gratis [➭](http://cartibunegratis.blogspot.ro "View source site") | 1.619.354 | 76.103 | 5,54% (67.833) | 9 MB | 3 MB [▼Download](https://drive.google.com/open?id=1DwnMXUsvbcLZSZPMLJ9GB9HEC9Mv1_c3 "Download compressed file")
@@ -59,7 +59,7 @@ ru-101-books [➭](http://www.101books.ru/ "View source site") | 87.936.969 | 70
 dezbateri-parlamentare [➭](http://www.cdep.ro/pls/steno/steno.home?idl=1 "View source site") | 109.244.724 | 250.406 | 14,22% (174.140) | 764 MB | 227 MB [▼Download](https://drive.google.com/open?id=1QDZfoV_ftVKRTPEDpkr3grcxYDnX_ULU "Download compressed file")
 just [➭](http://legislatie.just.ro/Public/RezultateCautare?page=1 "View source site") | 188.155.635 | 580.225 | 20,16% (246.794) | 1.998 MB | 349 MB [▼Download](https://drive.google.com/open?id=1o89XyGGpHeif3eRycfT_SZYHdUpautBO "Download compressed file")
 wiki-ro [➭](https://dumps.wikimedia.org/rowiki/latest/rowiki-latest-pages-meta-current.xml.bz2 "View source site") | 198.707.897 | 2.429.146 | 40,85% (500.213) | 1.441 MB | 341 MB [▼Download](https://drive.google.com/open?id=1UGxDkF_EzSOiie_vs8uio3_FSr6_SL-7 "Download compressed file")
-all [➭](https://github.com/aleris/ReadME-RoTex-Corpus-Builder "View source site") | 780.909.575 | 3.687.549 | 58,3% (713.796) | 6.090 MB | 1.578 MB [▼Download]( "Download compressed file")
+all-readme-rotex [➭](https://github.com/aleris/ReadME-RoTex-Corpus-Builder "View source site") | 780.909.575 | 3.687.549 | 58,3% (713.796) | 6.090 MB | 1.578 MB [▼Download](https://drive.google.com/open?id=1A-emtgS2QOjDtGNxR6VHgsM_EZvzOdvE "Download compressed file")
 
 (¹) Total number of words in the source, where a word is considered any sequence of letters, even if it is not present 
 in DEX.
@@ -82,11 +82,11 @@ is loaded directly without going to the database.
 The simplest way to run it is to use the docker image ocrmypdf-polyglot as described 
 [here](https://ocrmypdf.readthedocs.io/en/latest/installation.html#installing-the-docker-image).  
 
-# Help Wanted
+# Contributions Welcomed
 There are multiple ways to make this tool better, any help is highly appreciated:
+- Recommend a new source with lots of high quality text in Romanian to be added;
 - Pick a proposed source from below, implement it and make a PR;
 - Improve the text extraction of an existing source and make a PR;
-- Recommend a new source to be added;
 - Help obtaining official usage rights from source owners.
 
 # TODO
