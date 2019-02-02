@@ -64,8 +64,8 @@ class BuildController {
 
     fun run() {
 //        runBuildSources(listOf(
-//            DcepSource()
-//        ).map { BuildSource(it) })
+//            GazetaDeClujSource()
+//        ).map { BuildSource(it, BuildSourceOptions(checkOriginalDeep = true)) })
 //         , BuildSourceOptions(checkOriginalDeep = true)
 
         runBuildSources(allBuildSources)

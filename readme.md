@@ -52,6 +52,7 @@ litera-net [➭](http://editura.liternet.ro/catalog/1/Romana/toate-cartile.html 
 biblioteca-digitala-ase [➭](http://www.biblioteca-digitala.ase.ro/biblioteca "View source site") | 16.105.049 | 256.196 | 10,73% (131.383) | 121 MB | 37 MB [▼Download](https://drive.google.com/open?id=1VPg0vrflrCQWS6coytOZR2LndjXroFQM "Download compressed file")
 biblioteca-pe-mobil [➭](https://scoala.bibliotecapemobil.ro "View source site") | 19.299.099 | 419.782 | 17,09% (209.309) | 116 MB | 44 MB [▼Download](https://drive.google.com/open?id=1PUef4yUwYVsFaJrQzc6_u7909NgJEUeA "Download compressed file")
 ziarul-lumina [➭](http://ziarullumina.ro "View source site") | 23.693.901 | 271.607 | 13,17% (161.249) | 168 MB | 59 MB [▼Download](https://drive.google.com/open?id=1mpg7qaLH1__XWTzLUELO3LqmBrUZqNzs "Download compressed file")
+gazeta-de-cluj [➭](https://gazetadecluj.ro/stiri/stiri-cluj "View source site") | 25.772.022 | 332.846 | 13,2% (161.635) | 171 MB | 59 MB [▼Download]( "Download compressed file")
 bestseller-md [➭](https://www.bestseller.md "View source site") | 27.766.289 | 348.555 | 18,01% (220.517) | 171 MB | 63 MB [▼Download](https://drive.google.com/open?id=1PvUXcnvPo6dOyA8L6lCuqbsAvlWp3BeV "Download compressed file")
 dcep [➭](https://wt-public.emm4u.eu/Resources/DCEP-2013/DCEP-Download-Page.html "View source site") | 34.534.679 | 174.371 | 6,75% (82.655) | 262 MB | 71 MB [▼Download](https://drive.google.com/open?id=1SJsMPS_8UuYDx1KerZI8uZ-AUN0JnvZx "Download compressed file")
 bzi [➭](https://www.bzi.ro/arhiva "View source site") | 42.923.167 | 289.744 | 13,96% (170.975) | 301 MB | 105 MB [▼Download](https://drive.google.com/open?id=1kDHgid2dNdEL9oYQSQJiCjBAw4r9gFLQ "Download compressed file")
@@ -59,7 +60,7 @@ ru-101-books [➭](http://www.101books.ru/ "View source site") | 87.936.969 | 70
 dezbateri-parlamentare [➭](http://www.cdep.ro/pls/steno/steno.home?idl=1 "View source site") | 109.244.724 | 250.406 | 14,22% (174.140) | 764 MB | 227 MB [▼Download](https://drive.google.com/open?id=1QDZfoV_ftVKRTPEDpkr3grcxYDnX_ULU "Download compressed file")
 just [➭](http://legislatie.just.ro/Public/RezultateCautare?page=1 "View source site") | 188.155.635 | 580.225 | 20,16% (246.794) | 1.998 MB | 349 MB [▼Download](https://drive.google.com/open?id=1o89XyGGpHeif3eRycfT_SZYHdUpautBO "Download compressed file")
 wiki-ro [➭](https://dumps.wikimedia.org/rowiki/latest/rowiki-latest-pages-meta-current.xml.bz2 "View source site") | 198.707.897 | 2.429.146 | 40,85% (500.213) | 1.441 MB | 341 MB [▼Download](https://drive.google.com/open?id=1UGxDkF_EzSOiie_vs8uio3_FSr6_SL-7 "Download compressed file")
-all-readme-rotex [➭](https://github.com/aleris/ReadME-RoTex-Corpus-Builder "View source site") | 780.909.575 | 3.687.549 | 58,3% (713.796) | 6.090 MB | 1.578 MB [▼Download](https://drive.google.com/open?id=1A-emtgS2QOjDtGNxR6VHgsM_EZvzOdvE "Download compressed file")
+all-readme-rotex [➭](https://github.com/aleris/ReadME-RoTex-Corpus-Builder "View source site") | 806.681.597 | 3.744.278 | 58,6% (717.494) | 6.262 MB | 1.638 MB [▼Download](https://drive.google.com/open?id=1A-emtgS2QOjDtGNxR6VHgsM_EZvzOdvE "Download compressed file")
 
 (¹) Total number of words in the source, where a word is considered any sequence of letters, even if it is not present 
 in DEX.

@@ -37,6 +37,9 @@ dependencies {
 
     compile 'org.mariadb.jdbc:mariadb-java-client:2.2.3'
 
+    compile 'org.apache.tika:tika-core:1.20'
+    compile 'org.apache.tika:tika-parsers:1.20'
+
     compile 'org.reflections:reflections:0.9.11'
 }
 
