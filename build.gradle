@@ -41,6 +41,9 @@ dependencies {
     compile 'org.apache.tika:tika-parsers:1.20'
 
     compile 'org.reflections:reflections:0.9.11'
+
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.2'
+    testCompile 'org.junit.jupiter:junit-jupiter-engine:5.3.2'
 }
 
 compileKotlin {

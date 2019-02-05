@@ -1,0 +1,277 @@
+acad.;academician;true
+asist.;asistent;true
+conf.;conferențiar;true
+doc.;docent;true
+dr.;doctor;true
+dr. doc.;doctor docent;true
+dr. univ.;doctor universitar;true
+drd.;doctorand;true
+înv.;învățător;true
+lect.;lector;true
+prof.;profesor;true
+
+ap.;apostol;true
+arh.;arhanghel;true
+arhiep.;arhiepiscop;true
+cuv.;cuvios;true
+ep.;episcop;true
+ier.;ierarh;true
+mărt.;mărturisitor;true
+mc.;mucenic;true
+m. mc.;mare mucenic;true
+patr.;patriarh;true
+pr.;preot;true
+
+etc.;et cetera;false
+d.p.d.v.;din punct de vedere;false
+ș.a.m.d.;și așa mai departe;false
+ș.a.;;și altele;false
+ș.c.l.;și celelalte;false
+e.n.;era noastră;false
+î.e.n.;înaintea erei noastre;false
+d.c.;după cristos;false
+d.hr.;după hristos;false
+
+nr.;numărul;true
+art.;articolul;true
+alin.;aliniatul;true
+lit.;litera;true
+
+str.;strada;true
+mun.;municipiul;true
+sc.;scara;true
+bl.;blocul;true
+et.;etajul;true
+ap.;apartamentul;true
+jud.;județul;true
+
+ian.;ianuarie;true
+feb.;februarie;true
+mar.;martie;true
+apr.;aprilie;true
+iun.;iunie;true
+iul.;iulie;true
+aug.;august;true
+sep.;septembrie;true
+sept.;septembrie;true
+oct.;octombrie;true
+dec.;decembrie;true
+
+abr.;abreviat, abreviere;false
+absol.;(tranzitiv) absolut;false
+acc.;accentuat;false
+acuz.;acuzativ;false
+adj.;adjectiv;false
+adj.dem.;adjectiv demonstrativ;false
+adj.interog.-rel.;adjectiv interogativ-relativ;false
+adj.nehot.;adjectiv nehotărât;false
+adj.pos.;adjectiv posesiv;false
+adv.;adverb;false
+adv.interog.;adverb interogativ;false
+aeron.;aeronautică;false
+agric.;agricultură;false
+agron.;agronomie;false
+alb.;limba albaneză;false
+anat.;anatomie;false
+aor.;aorist;false
+apic.;apicultură;false
+arg.;argotic;false
+arh.;arhaizant;false
+arheol.;arheologie;false
+arhit;arhitectură;false
+art.;articol; articulat;false
+art.adj.;articol adjectival;false
+art.hot.;articol hotărât;false
+art.nehot.;articol nehotărât;false
+art.pos.;articol posesiv;false
+astron.;astronomie;false
+bg.;limba bulgară;false
+biochim.;biochimie;false
+biol.;biologie;false
+bis.;termen bisericesc;false
+bot.;botanică;false
+ceh.;limba cehă;false
+cf.;confer;false
+chim.;chimie;false
+cib.;cibernetică;false
+cin.;cinema; cinematografie;false
+concr.;concretizat;false
+conj.;conjuncție;false
+constr.;construcții;false
+cont.;contabilitate;false
+cor.;coregrafie;false
+cosm.;cosmografie; cosmologie;false
+cr.;hristos;false
+cuv.;cuvânt;false
+cuv. am.;cuvânt american;false
+dat.;dativ;false
+depr.;depreciativ;false
+der.;derivat;false
+dial.;dialect(al);false
+ebr.;limba ebraică;false
+ec.pol.;economie politică;false
+electron.;electronică;false
+elem.;element;false
+elt.;electrotehnică;false
+engl.;limba engleză;false
+engl.am.;engleză americană;false
+entom.;entomologie;false
+esper.;limba esperanto;false
+et. nec.;etimologie necunoscută;false
+expr.;expresie;false
+fact.;(tranzitiv) factitiv;false
+fam.;familiar;false
+farm.;farmacie; farmacologie;false
+fig.;figurat;false
+fil.;filozofie;false
+filol.;filologie;false
+fin.;finanțe;false
+fiz.;fizică;false
+fiziol.;fiziologie;false
+fon.;fonetică; fonologie;false
+fot.;fotografie;false
+fr.;limba franceză;false
+gen.;genitiv;false
+geogr.;geografie;false
+geol.;geologie;false
+geom.;geometrie;false
+ger.;gerunziu;false
+germ.;limba germană;false
+gr.;limba greacă (veche);false
+gram.;gramatică;false
+hort.;horticultură;false
+iht.;ihtiologie;false
+imper.;imperativ;false
+imperf.;imperfect;false
+impers.;(verb) impersonal;false
+impr.;impropriu;false
+ind.;industrie;false
+inf.;infinitiv;false
+inform.;informatică;false
+interj.;interjecție;false
+intranz.;intranzitiv;false
+invar.;invariabil;false
+ir.;ironic;false
+ist.;istorie;false
+it.;limba italiană;false
+înv.;învechit;false
+jap.;limba japoneză;false
+jur.;științe juridice;false
+lat.;limba latină;false
+lat. lit.;neologism din limba latină;false
+lat.med.;limba latină medievală;false
+lat.pop.;limba latină populară;false
+lingv.;lingvistică;false
+livr.;livresc;false
+loc.;locuțiune;false
+loc.adj.;locuțiune adjectivală;false
+loc.adv.;locuțiune adverbială;false
+loc.conj.;locuțiune conjuncțională;false
+loc.prep.;locuțiune prepozițională;false
+loc.vb.;locuțiune verbală;false
+log.;logică;false
+magh.;limba maghiară;false
+mar.;marină;false
+mat.;matematică;false
+mec.;mecanică;false
+med.;medicină;false
+med.vet.;medicină veterinară;false
+megl.;meglenoromână;false
+met.;meteorologie;false
+m.gr.;limba medie greacă;false
+mil.;termen militar;false
+min.;mineralogie, minerit;false
+mitol.;mitologie;false
+m.m.ca perf.;mai mult ca perfectul;false
+muz.;muzică;false
+ngr.;limba neogreacă;false
+nom.;nominativ;false
+n.pr.;nume propriu;false
+num.;numeral;false
+num.adv.;numeral adverbial;false
+num.card.;numeral cardinal;false
+num.col.;numeral colectiv;false
+numism.;numismatică;false
+num.multipl.;numeral multiplicativ;false
+num.nehot.;numeral nehotărât;false
+num.ord.;numeral ordinal;false
+opt.;optică;false
+ornit.;ornitologie;false
+p.anal.;prin analogie;false
+part.;participiu;false
+peior.;peiorativ;false
+perf.c.;perfect compus;false
+perf.s.;perfect simplu;false
+pers.;persoană;false
+p.ext.;prin extensiune;false
+p.gener.;prin generalizare;false
+pict.;pictură;false
+pl.;plural;false
+pol.;limba poloneză;false
+pop.;popular;false
+port.;limba portugheză;false
+pr.;pronunțat;false
+pref.;prefix;false
+prep.;prepoziție;false
+p.restr.;prin restricție;false
+prez.;prezent;false
+prez.conj.;prezent conjunctiv;false
+prez.ind.;prezent indicativ;false
+pron.;pronume;false
+pron.dem.;pronume demonstrativ;false
+pron.interog.-rel.;pronume interogativ-relativ;false
+pron.întăr.;pronume de întărire;false
+pron.neg.;pronume negativ;false
+pron.nehot.;pronume nehotărât;false
+pron.per.;pronume personal;false
+pron.pos.;pronume posesiv;false
+pron.refl.;pronume reflexiv;false
+psih.;psihologie;false
+rad.;radio; radiofonie;false
+refl.;reflexiv;false
+refl.impers.;reflexiv impersonal;false
+refl.pas.;reflexiv pasiv;false
+refl.recipr.;reflexiv reciproc;false
+refl.unipers.;reflexiv unipersonal;false
+reg.;regional;false
+rom.;limba română;false
+rus.;limba rusă;false
+săs.;dialectul săsesc;false
+sb.;limba sârbă;false
+scr.;(limba) sârbă, croată;false
+sec.;secolul;true
+s.f.;substantiv feminin;false
+sg.;singular;false
+sic.;dialectul sicilian;false
+silv.;silvicultură;false
+sl.;limba slavă (veche);false
+slov.;limba slovenă;false
+s.m.;substantiv masculin;false
+s.n.;substantiv neutru;false
+sp.;limba spaniolă;false
+spec.;prin specializare;false
+srb.;limba sârbă;false
+subst.;substantiv;false
+suf.;sufix;false
+șt.nat.;știintele naturii;false
+tăt.;limba tătară;false
+tc.;limba turcă;false
+tehn.;tehnică;false
+tel.;televiziune;false
+teol.;teologie;false
+text.;industrie textilă;false
+tipogr.;tipografie;false
+top.;topografie;false
+tranz.;tranzitiv;false
+țig.;limba țigănească;false
+ucr.;limba ucraineană;false
+unipers.;unipersonal;false
+urb.;urbanistică;false
+v.;vezi;true
+v.c.;vezi cuvintele;true
+v.;vechi;false
+var.;variantă;false
+vb.;verb;false
+viit.;viitor;false
+voc.;vocativ;false
+zool.;zoologie;false
