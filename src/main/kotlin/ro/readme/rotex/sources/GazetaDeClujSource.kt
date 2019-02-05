@@ -6,6 +6,7 @@ import org.jsoup.nodes.Element
 import ro.readme.rotex.retrySocketTimeoutException
 import ro.readme.rotex.skipFileIfExists
 import ro.readme.rotex.utils.PathUtils
+import ro.readme.rotex.utils.TextCleaner
 import java.io.File
 
 class GazetaDeClujSource: Source {
@@ -115,7 +116,10 @@ class GazetaDeClujSource: Source {
                                 val author = article.attr("author")
                                 printWriter.println(author)
                                 article.children().forEach {
-                                    printWriter.println(it.text())
+                                    val cleaned =
+                                        TextCleaner(it.text()).correctCedilaDiacritics()
+                                            .cleaned
+                                    printWriter.println(cleaned)
                                 }
                             }
                             println("OK")
