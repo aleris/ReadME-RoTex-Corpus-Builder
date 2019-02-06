@@ -1,5 +1,6 @@
 # ReadME RoTex Corpus Builder
 Builds a corpus of Romanian text from different online sources.
+[![Build Status](https://travis-ci.com/aleris/ReadME-RoTex-Corpus-Builder.svg?branch=master)](https://travis-ci.com/aleris/ReadME-RoTex-Corpus-Builder)
 
 # Description
 This project aims to make available, in an open and transparent way, a high quality corpus of Romanian plain texts 
@@ -104,7 +105,6 @@ There are multiple ways to make this tool better, any help is highly appreciated
 
 # TODO
 
-* http://artapolitica.ro/
 * http://romania-inedit.3xforum.ro/topic/83/Carti_in_limba_romana/
 
 Sources to be considered for inclusion:
