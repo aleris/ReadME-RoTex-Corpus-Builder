@@ -6,7 +6,7 @@ import ro.readme.rotex.utils.PathUtils
 import ro.readme.rotex.utils.TextCleaner
 import java.lang.Exception
 
-class CartiBuneGratisSource: Source {
+class CartiBuneGratisSource: Source() {
     override val sourceKey = "carti-bune-gratis"
     override val originalLink = "http://cartibunegratis.blogspot.ro"
     override val downloadLink = "https://drive.google.com/open?id=1DwnMXUsvbcLZSZPMLJ9GB9HEC9Mv1_c3"

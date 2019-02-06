@@ -14,7 +14,7 @@ import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 import java.util.stream.Stream
 
-class NapocaNewsSource: Source {
+class NapocaNewsSource: Source() {
     override val sourceKey = "napoca-news"
     override val originalLink = "http://www.napocanews.ro/"
     override val downloadLink = ""

@@ -6,7 +6,7 @@ import org.jsoup.Jsoup
 import ro.readme.rotex.skipFileIfExists
 import ro.readme.rotex.utils.PathUtils
 
-class DcepSource: Source {
+class DcepSource: Source() {
     override val sourceKey = "dcep"
     override val originalLink = "https://wt-public.emm4u.eu/Resources/DCEP-2013/DCEP-Download-Page.html"
     override val downloadLink = "https://drive.google.com/open?id=1SJsMPS_8UuYDx1KerZI8uZ-AUN0JnvZx"

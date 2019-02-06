@@ -10,7 +10,7 @@ import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 import java.util.stream.Stream
 
-class UzpSource: Source {
+class UzpSource: Source() {
     override val sourceKey = "uzp"
     override val originalLink = "https://uzp.org.ro"
     override val downloadLink = ""

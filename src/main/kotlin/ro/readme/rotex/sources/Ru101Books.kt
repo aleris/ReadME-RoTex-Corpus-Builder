@@ -8,7 +8,7 @@ import ro.readme.rotex.utils.PathUtils
 import ro.readme.rotex.utils.PdfTextExtractor
 import ro.readme.rotex.utils.TextCleaner
 
-class Ru101Books: Source {
+class Ru101Books: Source() {
     override val sourceKey = "ru-101-books"
     override val originalLink = "http://www.101books.ru/"
     override val downloadLink = "https://drive.google.com/open?id=1Hlbu0i8dgKjDhXL-LYZP-eEy9dEIshoB"

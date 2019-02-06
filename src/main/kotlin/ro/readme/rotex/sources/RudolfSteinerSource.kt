@@ -10,7 +10,7 @@ import java.io.File
 import java.io.PrintWriter
 import java.nio.file.Path
 
-class RudolfSteinerSource: Source {
+class RudolfSteinerSource: Source() {
     override val sourceKey = "rudolf-steiner"
     override val originalLink = "http://www.spiritualrs.net/Lucrari_GA.html"
     override val downloadLink = "https://drive.google.com/open?id=1vbVfDe2Dv774kOyl18AYxw7zn5-_SXFb"

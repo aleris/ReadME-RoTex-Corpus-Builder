@@ -7,7 +7,7 @@ import ro.readme.rotex.utils.PathUtils
 import ro.readme.rotex.utils.PdfTextExtractor
 import ro.readme.rotex.utils.TextCleaner
 
-class DestineLiteraleSource: Source {
+class DestineLiteraleSource: Source() {
     override val sourceKey = "destine-literale"
     override val originalLink = "http://www.scriitoriiromani.com/DestineLiterare.html"
     override val downloadLink = "https://drive.google.com/open?id=1cBnAKvgMihuG_xiL3jTO8_bBTY9R43Ri"

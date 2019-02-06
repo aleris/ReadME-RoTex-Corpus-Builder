@@ -9,7 +9,7 @@ import ro.readme.rotex.utils.PathUtils
 import ro.readme.rotex.utils.TextCleaner
 import java.io.File
 
-class GazetaDeClujSource: Source {
+class GazetaDeClujSource: Source() {
     override val sourceKey = "gazeta-de-cluj"
     override val originalLink = "https://gazetadecluj.ro/stiri/stiri-cluj"
     override val downloadLink = ""

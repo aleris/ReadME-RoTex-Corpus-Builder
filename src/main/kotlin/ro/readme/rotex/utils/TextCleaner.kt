@@ -44,6 +44,15 @@ class TextCleaner(var cleaned: String) {
         return this
     }
 
+    fun correctHtmlEntitiesDiacritics(): TextCleaner {
+        cleaned = cleaned
+            .replace("&#539;", "ț")
+            .replace("&#538;", "Ț")
+            .replace("&#537;", "ș")
+            .replace("&#536;", "Ș")
+        return this
+    }
+
     fun replaceEPubMultipleSpacesWithNewLine(): TextCleaner {
         cleaned = cleaned.replace("     ", "\n")
         return this

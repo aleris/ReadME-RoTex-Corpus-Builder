@@ -8,7 +8,7 @@ import ro.readme.rotex.utils.PdfTextExtractor
 import ro.readme.rotex.utils.TextCleaner
 import java.nio.file.Paths
 
-class PaulGomaSource: Source {
+class PaulGomaSource: Source() {
     override val sourceKey = "paul-goma"
     override val originalLink = "http://www.paulgoma.com/lista-completa"
     override val downloadLink = "https://drive.google.com/open?id=1DPEssf7eHCml0jCsvGORsfHEhaAWyNyj"

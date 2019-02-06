@@ -7,7 +7,7 @@ import ro.readme.rotex.utils.PathUtils
 import ro.readme.rotex.utils.TextCleaner
 import java.nio.file.Paths
 
-class BestsellerMDSource: Source {
+class BestsellerMDSource: Source() {
 
     override val sourceKey = "bestseller-md"
     override val originalLink = "https://www.bestseller.md"

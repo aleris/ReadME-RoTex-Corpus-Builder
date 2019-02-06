@@ -10,7 +10,7 @@ import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 import java.util.stream.Stream
 
-class CertitudineaSource: Source {
+class CertitudineaSource: Source() {
     override val sourceKey = "certitudinea"
     override val originalLink = "http://www.certitudinea.ro"
     override val downloadLink = ""

@@ -22,7 +22,7 @@ import java.nio.file.Paths
 import java.util.ArrayList
 import java.util.HashMap
 
-class BibliotecaDigitalaAseSource: Source {
+class BibliotecaDigitalaAseSource: Source() {
     override val sourceKey = "biblioteca-digitala-ase"
     override val originalLink = "http://www.biblioteca-digitala.ase.ro/biblioteca"
     override val downloadLink = "https://drive.google.com/open?id=1VPg0vrflrCQWS6coytOZR2LndjXroFQM"

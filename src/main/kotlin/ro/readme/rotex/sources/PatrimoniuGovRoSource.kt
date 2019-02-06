@@ -7,7 +7,7 @@ import ro.readme.rotex.skipFileIfExists
 import ro.readme.rotex.utils.PathUtils
 import ro.readme.rotex.utils.PdfTextExtractor
 
-//class PatrimoniuGovRoSource: Source {
+//class PatrimoniuGovRoSource: Source() {
 //    override val sourceKey = "patrimoniu-gov-ro"
 //    override val originalLink = "http://www.cimec.ro/Biblioteca-Digitala/Biblioteca.html"
 //    override val downloadLink = ""

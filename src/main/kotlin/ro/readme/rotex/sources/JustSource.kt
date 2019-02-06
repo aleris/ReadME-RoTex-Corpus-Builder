@@ -12,7 +12,7 @@ import ro.readme.rotex.utils.TextCleaner
 import ro.readme.rotex.utils.TextUtils
 import java.io.File
 
-class JustSource: Source {
+class JustSource: Source() {
     override val sourceKey = "just"
     override val originalLink = "http://legislatie.just.ro/Public/RezultateCautare?page=1"
     override val downloadLink = "https://drive.google.com/open?id=1o89XyGGpHeif3eRycfT_SZYHdUpautBO"

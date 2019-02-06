@@ -7,7 +7,7 @@ import ro.readme.rotex.skipFileIfExists
 import ro.readme.rotex.utils.PathUtils
 import ro.readme.rotex.utils.TextCleaner
 
-class JurisprudentaSource: Source {
+class JurisprudentaSource: Source() {
     override val sourceKey = "jurisprudenta"
     override val originalLink = "https://www.jurisprudenta.com/jurisprudenta/"
     override val downloadLink = ""

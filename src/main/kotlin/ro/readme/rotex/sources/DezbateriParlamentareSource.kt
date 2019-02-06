@@ -9,7 +9,7 @@ import ro.readme.rotex.utils.TextUtils
 import java.io.File
 import java.nio.file.Paths
 
-class DezbateriParlamentareSource: Source {
+class DezbateriParlamentareSource: Source() {
     override val sourceKey = "dezbateri-parlamentare"
     override val originalLink = "http://www.cdep.ro/pls/steno/steno.home?idl=1"
     override val downloadLink = "https://drive.google.com/open?id=1QDZfoV_ftVKRTPEDpkr3grcxYDnX_ULU"

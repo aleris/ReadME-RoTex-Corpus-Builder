@@ -8,7 +8,7 @@ import ro.readme.rotex.utils.PdfTextExtractor
 import ro.readme.rotex.utils.TextCleaner
 import java.nio.file.Paths
 
-class BziSource: Source {
+class BziSource: Source() {
     override val sourceKey = "bzi"
     override val originalLink = "https://www.bzi.ro/arhiva"
     override val downloadLink = "https://drive.google.com/open?id=1kDHgid2dNdEL9oYQSQJiCjBAw4r9gFLQ"

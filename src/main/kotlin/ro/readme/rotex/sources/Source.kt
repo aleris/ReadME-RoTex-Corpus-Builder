@@ -1,13 +1,15 @@
 package ro.readme.rotex.sources
 
-interface Source {
-    val sourceKey: String
+abstract class Source {
+    open val enabled = true
 
-    val originalLink: String
+    abstract val sourceKey: String
 
-    val downloadLink: String
+    abstract val originalLink: String
 
-    fun downloadOriginal(override: Boolean)
+    abstract val downloadLink: String
 
-    fun extractText(override: Boolean)
+    abstract fun downloadOriginal(override: Boolean)
+
+    abstract fun extractText(override: Boolean)
 }

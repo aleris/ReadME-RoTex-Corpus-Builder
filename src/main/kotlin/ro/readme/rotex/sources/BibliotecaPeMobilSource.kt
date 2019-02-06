@@ -6,7 +6,7 @@ import ro.readme.rotex.utils.EPubTextExtractor
 import ro.readme.rotex.utils.PathUtils
 import ro.readme.rotex.utils.TextCleaner
 
-class BibliotecaPeMobilSource: Source {
+class BibliotecaPeMobilSource: Source() {
     override val sourceKey = "biblioteca-pe-mobil"
     override val originalLink = "https://scoala.bibliotecapemobil.ro"
     override val downloadLink = "https://drive.google.com/open?id=1PUef4yUwYVsFaJrQzc6_u7909NgJEUeA"
