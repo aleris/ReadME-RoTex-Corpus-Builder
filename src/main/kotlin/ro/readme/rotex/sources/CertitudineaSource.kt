@@ -13,7 +13,7 @@ import java.util.stream.Stream
 class CertitudineaSource: Source() {
     override val sourceKey = "certitudinea"
     override val originalLink = "http://www.certitudinea.ro"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1X6C3RGSRm4zfSBOGotiKwJOjMeprdTFa"
 
     override fun downloadOriginal(override: Boolean) {
         val start = LocalDate.parse("2013-01-01")

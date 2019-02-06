@@ -13,7 +13,7 @@ import java.util.stream.Stream
 class UzpSource: Source() {
     override val sourceKey = "uzp"
     override val originalLink = "https://uzp.org.ro"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1ST5FJ7AzUk-94cdT4tBQvCOhCyJ26HOn"
 
     override fun downloadOriginal(override: Boolean) {
         val start = LocalDate.parse("2017-08-01")

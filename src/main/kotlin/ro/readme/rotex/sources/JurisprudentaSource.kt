@@ -10,7 +10,7 @@ import ro.readme.rotex.utils.TextCleaner
 class JurisprudentaSource: Source() {
     override val sourceKey = "jurisprudenta"
     override val originalLink = "https://www.jurisprudenta.com/jurisprudenta/"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1RLSVNJz8goCFg8LNzuCNCXcuxS-aoype"
 
     override fun downloadOriginal(override: Boolean) {
         var page = 1

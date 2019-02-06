@@ -12,7 +12,7 @@ import java.io.File
 class GazetaDeClujSource: Source() {
     override val sourceKey = "gazeta-de-cluj"
     override val originalLink = "https://gazetadecluj.ro/stiri/stiri-cluj"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1awJVQZzRvoQ6NNua2dGLWnlMPGDGcDuc"
 
     override fun downloadOriginal(override: Boolean) {
         val categories = arrayOf(

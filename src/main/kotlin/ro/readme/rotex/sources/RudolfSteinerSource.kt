@@ -8,7 +8,6 @@ import ro.readme.rotex.utils.PathUtils
 import ro.readme.rotex.utils.TextCleaner
 import java.io.File
 import java.io.PrintWriter
-import java.nio.file.Path
 
 class RudolfSteinerSource: Source() {
     override val sourceKey = "rudolf-steiner"
@@ -38,7 +37,7 @@ class RudolfSteinerSource: Source() {
                                             <html>
                                                 <body>
                                         """.trimIndent())
-                                    writeBook(printWriter, link.last(), destinationFilePath)
+                                    writeBook(printWriter, link.last())
                                     printWriter.println("""
                                                 </body>
                                             </html
@@ -52,7 +51,7 @@ class RudolfSteinerSource: Source() {
         }
     }
 
-    private fun writeBook(printWriter: PrintWriter, link: Element, destinationFilePath: Path) {
+    private fun writeBook(printWriter: PrintWriter, link: Element) {
         val href = link.attr("href")
         val bookDoc = Jsoup
             .connect("http://www.spiritualrs.net/$href")

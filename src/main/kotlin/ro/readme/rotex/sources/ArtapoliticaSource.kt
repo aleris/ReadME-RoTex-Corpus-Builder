@@ -10,7 +10,7 @@ import ro.readme.rotex.utils.TextCleaner
 class ArtapoliticaSource: Source() {
     override val sourceKey = "artapolitica"
     override val originalLink = "http://www.tion.ro/date/2019"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1RdJpRz88tlvEb6f5gBL5ovEWf54dU2W2"
 
     override fun downloadOriginal(override: Boolean) {
         val mainDoc = Jsoup

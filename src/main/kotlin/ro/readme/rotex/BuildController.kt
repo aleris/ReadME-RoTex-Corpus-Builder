@@ -41,6 +41,7 @@ class BuildController {
 
         buildAllCompressedFile()
 
+        println()
         println("Gathering statistics...")
         DexDictionary.ensureLoaded()
         println()

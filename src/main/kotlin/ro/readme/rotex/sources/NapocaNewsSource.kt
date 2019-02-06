@@ -17,7 +17,7 @@ import java.util.stream.Stream
 class NapocaNewsSource: Source() {
     override val sourceKey = "napoca-news"
     override val originalLink = "http://www.napocanews.ro/"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=18GDMbRrGAVoykMajbuGvDLWgpbult8_p"
 
     override fun downloadOriginal(override: Boolean) {
         var page = 1
