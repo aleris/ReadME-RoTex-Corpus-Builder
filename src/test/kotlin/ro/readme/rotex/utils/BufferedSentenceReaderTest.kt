@@ -202,14 +202,14 @@ internal class BufferedSentenceReaderTest {
 
     @Test
     fun readReal4FromFile() {
-        FileReader("/Users/at/Documents/data/biblior-ro/txt/Povestiri.txt").use {
-            BufferedReader(it).use {
+        javaClass.getResource("/senteces.txt")
+            .openStream()
+            .bufferedReader()
+            .use {
                 bufferedSentenceDetector.read(it).forEach { sentence ->
                     println("->$sentence<-")
                 }
             }
-        }
-
     }
 
     private fun test(exampleString: String, expectedSentenceCount: Int) {
