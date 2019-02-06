@@ -59,7 +59,9 @@ class PaulGomaSource: Source() {
             .replace('™', 'Ă')
             .replace('˜', 'Â')
             .replace('ï', 'Î')
-            .replace(Regex("\\d+P A U L G O M A -"), "")
+            .replace(Regex("\\d+ ?P A U L G O M A(?: -)?"), "")
+            .replace(Regex("\\d+ ?P A U L"), "")
+            .replace("G O M A", "")
     }
 
     override fun extractText(override: Boolean) {
