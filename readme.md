@@ -64,10 +64,10 @@ dcep [➭](https://wt-public.emm4u.eu/Resources/DCEP-2013/DCEP-Download-Page.htm
 bzi [➭](https://www.bzi.ro/arhiva "View source site") | 42.923.167 | 289.744 | 13,96% (170.975) | 301 MB | 105 MB [▼Download](https://drive.google.com/open?id=1kDHgid2dNdEL9oYQSQJiCjBAw4r9gFLQ "Download compressed file")
 ru-101-books [➭](http://www.101books.ru/ "View source site") | 87.936.969 | 706.772 | 24,83% (303.991) | 534 MB | 199 MB [▼Download](https://drive.google.com/open?id=1Hlbu0i8dgKjDhXL-LYZP-eEy9dEIshoB "Download compressed file")
 dezbateri-parlamentare [➭](http://www.cdep.ro/pls/steno/steno.home?idl=1 "View source site") | 109.244.724 | 250.406 | 14,22% (174.140) | 764 MB | 227 MB [▼Download](https://drive.google.com/open?id=1QDZfoV_ftVKRTPEDpkr3grcxYDnX_ULU "Download compressed file")
-jurisprudenta [➭](https://www.jurisprudenta.com/jurisprudenta/ "View source site") | 114.208.968 | 285.542 | 11,02% (134.916) | 798 MB | 0 MB [▼Download](https://drive.google.com/open?id=1RLSVNJz8goCFg8LNzuCNCXcuxS-aoype "Download compressed file")
+jurisprudenta [➭](https://www.jurisprudenta.com/jurisprudenta/ "View source site") | 114.208.968 | 285.542 | 11,02% (134.916) | 798 MB | 213 MB [▼Download](https://drive.google.com/open?id=1RLSVNJz8goCFg8LNzuCNCXcuxS-aoype "Download compressed file")
 just [➭](http://legislatie.just.ro/Public/RezultateCautare?page=1 "View source site") | 188.155.635 | 580.225 | 20,16% (246.794) | 1.998 MB | 349 MB [▼Download](https://drive.google.com/open?id=1o89XyGGpHeif3eRycfT_SZYHdUpautBO "Download compressed file")
 wiki-ro [➭](https://dumps.wikimedia.org/rowiki/latest/rowiki-latest-pages-meta-current.xml.bz2 "View source site") | 198.707.897 | 2.429.146 | 40,85% (500.213) | 1.441 MB | 341 MB [▼Download](https://drive.google.com/open?id=1UGxDkF_EzSOiie_vs8uio3_FSr6_SL-7 "Download compressed file")
-all-readme-rotex [➭](https://github.com/aleris/ReadME-RoTex-Corpus-Builder "View source site") | 939.875.397 | 3.860.884 | 59,52% (728.780) | 7.188 MB | 1.688 MB [▼Download](https://drive.google.com/open?id=1A-emtgS2QOjDtGNxR6VHgsM_EZvzOdvE "Download compressed file")
+all-readme-rotex [➭](https://github.com/aleris/ReadME-RoTex-Corpus-Builder "View source site") | 939.875.397 | 3.860.884 | 59,52% (728.780) | 7.188 MB | 1.901 MB [▼Download](https://drive.google.com/open?id=1A-emtgS2QOjDtGNxR6VHgsM_EZvzOdvE "Download compressed file")
 
 (¹) Total number of words in the source, where a word is considered any sequence of letters, even if it is not present 
 in DEX.
