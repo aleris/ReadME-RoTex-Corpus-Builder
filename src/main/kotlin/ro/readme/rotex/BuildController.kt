@@ -65,7 +65,7 @@ class BuildController {
     }
 
     fun run() {
-//        runBuildSources(listOf(ArtapoliticaSource()).map { BuildSource(it)})
+//        runBuildSources(listOf(ArchiveOrgSource()).map { BuildSource(it)})
 //        runBuildSources(listOf(
 //            RomaniaIneditForum()
 //        ).map { BuildSource(it, BuildSourceOptions(checkOriginalDeep = true)) })
