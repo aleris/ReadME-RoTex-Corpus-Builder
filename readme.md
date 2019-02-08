@@ -1,6 +1,7 @@
 # ReadME RoTex Corpus Builder
 
 ![Word Count](https://img.shields.io/badge/words-972.227.108-orange.svg)
+![Word Count](https://img.shields.io/badge/dex%20coverage-61.58%25-yellow.svg)
 [![Build Status](https://travis-ci.com/aleris/ReadME-RoTex-Corpus-Builder.svg?branch=master)](https://travis-ci.com/aleris/ReadME-RoTex-Corpus-Builder)
 
 # Description
