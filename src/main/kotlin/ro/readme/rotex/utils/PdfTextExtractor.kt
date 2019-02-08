@@ -26,14 +26,13 @@ class PdfTextExtractor(private val forceOCR: Boolean = false,
 
         try {
             var useInputFile = inputFile
-            if (forceOCR or redoOCR) {
+            if (forceOCR || redoOCR) {
                 useInputFile = ocrFile(inputFile, forceOCR, redoOCR, Runtime.getRuntime().availableProcessors())
             }
 
             PDDocument.load(useInputFile).use { doc ->
                 val pageCount = doc.pages.count
                 if (minimumPages <= pageCount) {
-                    val repeatedMap = buildRepeatedLinesMap(doc)
 
                     if (checkInRomanian) {
                         val firsPagesBuilder = getFirstPagesText(doc, 10)
@@ -43,6 +42,8 @@ class PdfTextExtractor(private val forceOCR: Boolean = false,
                             return
                         }
                     }
+
+                    val repeatedMap = buildRepeatedLinesMap(doc)
 
                     for (index in 0 until pageCount) {
                         val cleaned = getPageCleanedText(doc, index, additionalTextClean, true)
@@ -111,7 +112,7 @@ class PdfTextExtractor(private val forceOCR: Boolean = false,
         if (fixLines) {
             textCleaner
                 .replaceMultipleSpacesWithNewLine()
-                .stitchLines()
+                .stitchLinesSimple()
         }
 
         return textCleaner.cleaned
@@ -137,7 +138,7 @@ class PdfTextExtractor(private val forceOCR: Boolean = false,
             val cleaned = getPageCleanedText(doc, index, additionalTextClean, true)
 
             val lines = cleaned.lines()
-            lines.withIndex().forEach { (index, line) ->
+            lines.forEach { line ->
                 val mappedLine = stripMappedLine(line)
                 if (mappedLine.isNotBlank()) {
                     repeatedHap.compute(mappedLine) { _, v -> if (null == v) 1 else v + 1 }
