@@ -72,22 +72,86 @@ class TextCleaner(var cleaned: String) {
         return this
     }
 
-    fun stitchLines(): TextCleaner {
+    fun stitchLinesSimple(): TextCleaner {
         val result = StringBuilder()
-        Scanner(cleaned).use { scanner ->
-            var stitchedLine = StringBuilder()
-            while (scanner.hasNextLine()) {
-                val line = scanner.nextLine()
-                if (stitchedLine.isNotBlank() && line.matches(Regex("^[A-ZĂÂÎȘȚ][^.]+"))) {
-                    result.append(stitchedLine.toString().replace(Regex("  "), " ").trim()).append(" \n")
-                    stitchedLine = StringBuilder(line)
-                } else {
-                    stitchedLine.append(" ").append(line)
+        var previousWasEndSentence = true
+        cleaned.lines().forEach { line ->
+            if (previousWasEndSentence ||
+                line.matches(Regex("^[A-ZĂÂÎȘȚ].+"))) {
+                result.appendln()
+            } else {
+                result.append(" ")
+            }
+            val trimmedLine = line.trim()
+            result.append(trimmedLine)
+            previousWasEndSentence = trimmedLine.endsWith(CharacterClass.END_SENTENCE.toString())
+        }
+        result.appendln()
+        cleaned = result.toString()
+        return this
+    }
+
+    fun stripLineBrakeReplacement(): TextCleaner {
+        cleaned = cleaned.replace("¬", "")
+        return this
+    }
+
+    fun removeDuplicateLinesIgnoringNumbers(): TextCleaner {
+        fun stripMappedLine(line: String) = line
+            .replace(Regex("\\s+"), "")
+            .replace(Regex("\\d+", RegexOption.MULTILINE), "")
+            .replace(Regex("[IVXLCDM]+", setOf(RegexOption.MULTILINE, RegexOption.IGNORE_CASE)), "")
+
+        fun buildRepeatedLinesMap(text: String): Map<String, Int> {
+            val repeatedHap = HashMap<String, Int>()
+
+            val lines = text.lines()
+            lines.forEach { line ->
+                val mappedLine = stripMappedLine(line)
+                if (mappedLine.isNotBlank()) {
+                    repeatedHap.compute(mappedLine) { _, v -> if (null == v) 1 else v + 1 }
                 }
             }
-            result.append(stitchedLine.toString().replace(Regex("  "), " ").trim())
+
+            val threshold = Math.max(5, (lines.size / 30) / 5)
+            return repeatedHap.filter { me -> threshold < me.value }
         }
-        cleaned = result.toString()
+
+        val repeated = buildRepeatedLinesMap(cleaned)
+
+        val sb = StringBuilder()
+        cleaned.lines().forEach {
+            val stripped = stripMappedLine(it)
+            if (!repeated.containsKey(stripped)) {
+                sb.appendln(it)
+            }
+        }
+
+        cleaned = sb.toString()
+        return this
+    }
+
+    fun removeLikelyPageNumber(): TextCleaner {
+        cleaned = cleaned.replace(
+            Regex(
+                "^(?:(?:pag|pg|pagina|pp)\\.?)?\\s*(?:nr\\.?\\s*)?(?:(?:[IVXLCDM]|\\d)+.{1,4})?(?:\\d|[IVXLCDM])+\\.?\$",
+                setOf(RegexOption.MULTILINE, RegexOption.IGNORE_CASE
+                )
+            ),
+            "")
+        return this
+    }
+
+    fun removeDuplicateBlankLines(): TextCleaner {
+        val sb = StringBuilder()
+        var previousWasBlank = true
+        cleaned.lines().forEach {
+            if (!(it.isBlank() && previousWasBlank)) {
+                sb.appendln(it)
+            }
+            previousWasBlank = it.isBlank()
+        }
+        cleaned = sb.toString()
         return this
     }
 }

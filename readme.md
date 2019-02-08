@@ -1,6 +1,6 @@
 # ReadME RoTex Corpus Builder
-Builds a corpus of Romanian text from different online sources.
 
+![Word Count](https://img.shields.io/badge/words-972.227.108-orange.svg)
 [![Build Status](https://travis-ci.com/aleris/ReadME-RoTex-Corpus-Builder.svg?branch=master)](https://travis-ci.com/aleris/ReadME-RoTex-Corpus-Builder)
 
 # Description
@@ -14,6 +14,49 @@ Given the non-structured nature of PDF files the results may vary.
 
 _*Warning:* Please note that not all sources are public domain 
 and securing usage rights might be necessary in some cases._  
+
+# Sources
+
+Sources ordered by total word count in document:
+
+Source | Word Count (¹) | Types Count (²) | DEX Coverage (³) | Uncompressed size | Compressed size
+--- | --- | --- | --- | --- | ---
+artapolitica [➭](http://artapolitica.ro "View source site") | 716.033 | 58.262 | 3,95% (48.418) | 4 MB | 1 MB [▼Download](https://drive.google.com/open?id=1RdJpRz88tlvEb6f5gBL5ovEWf54dU2W2 "Download compressed file")
+biblior [➭](http://biblior.net/carti "View source site") | 1.181.820 | 89.642 | 5,9% (72.298) | 7 MB | 2 MB [▼Download](https://drive.google.com/open?id=1nPpJdXbCAL13a2yIM9PgJiIXxZeRzGDF "Download compressed file")
+uzp [➭](https://uzp.org.ro "View source site") | 1.553.850 | 111.147 | 6,5% (79.622) | 10 MB | 4 MB [▼Download](https://drive.google.com/open?id=1ST5FJ7AzUk-94cdT4tBQvCOhCyJ26HOn "Download compressed file")
+carti-bune-gratis [➭](http://cartibunegratis.blogspot.ro "View source site") | 1.619.354 | 76.103 | 5,54% (67.833) | 9 MB | 3 MB [▼Download](https://drive.google.com/open?id=1DwnMXUsvbcLZSZPMLJ9GB9HEC9Mv1_c3 "Download compressed file")
+historica-cluj [➭](http://www.historica-cluj.ro/menu/arhiva_anuar.php "View source site") | 2.542.106 | 150.298 | 6,55% (80.157) | 18 MB | 6 MB [▼Download](https://drive.google.com/open?id=1FW4S4Mv0OriX8zMyNZzrCU3gc0ajmXLg "Download compressed file")
+destine-literale [➭](http://www.scriitoriiromani.com/DestineLiterare.html "View source site") | 4.325.392 | 270.410 | 11,29% (138.233) | 27 MB | 11 MB [▼Download](https://drive.google.com/open?id=1cBnAKvgMihuG_xiL3jTO8_bBTY9R43Ri "Download compressed file")
+certitudinea [➭](http://www.certitudinea.ro "View source site") | 4.338.169 | 117.207 | 6,95% (85.152) | 28 MB | 11 MB [▼Download](https://drive.google.com/open?id=1X6C3RGSRm4zfSBOGotiKwJOjMeprdTFa "Download compressed file")
+paul-goma [➭](http://www.paulgoma.com/lista-completa "View source site") | 6.536.053 | 254.228 | 10,82% (132.469) | 41 MB | 16 MB [▼Download](https://drive.google.com/open?id=1DPEssf7eHCml0jCsvGORsfHEhaAWyNyj "Download compressed file")
+rudolf-steiner [➭](http://www.spiritualrs.net/Lucrari_GA.html "View source site") | 7.678.761 | 106.878 | 5,52% (67.549) | 50 MB | 15 MB [▼Download](https://drive.google.com/open?id=1vbVfDe2Dv774kOyl18AYxw7zn5-_SXFb "Download compressed file")
+litera-net [➭](http://editura.liternet.ro/catalog/1/Romana/toate-cartile.html "View source site") | 8.591.552 | 263.844 | 14,88% (182.250) | 54 MB | 21 MB [▼Download](https://drive.google.com/open?id=1jbAjDqiiM9axfnA8k-afLnuweOSAEdOh "Download compressed file")
+napoca-news [➭](http://www.napocanews.ro/ "View source site") | 12.376.780 | 297.076 | 13,07% (159.974) | 83 MB | 32 MB [▼Download](https://drive.google.com/open?id=18GDMbRrGAVoykMajbuGvDLWgpbult8_p "Download compressed file")
+biblioteca-digitala-ase [➭](http://www.biblioteca-digitala.ase.ro/biblioteca "View source site") | 16.105.049 | 256.196 | 10,73% (131.383) | 121 MB | 37 MB [▼Download](https://drive.google.com/open?id=1VPg0vrflrCQWS6coytOZR2LndjXroFQM "Download compressed file")
+biblioteca-pe-mobil [➭](https://scoala.bibliotecapemobil.ro "View source site") | 19.299.099 | 419.782 | 17,09% (209.309) | 116 MB | 44 MB [▼Download](https://drive.google.com/open?id=1PUef4yUwYVsFaJrQzc6_u7909NgJEUeA "Download compressed file")
+ziarul-lumina [➭](http://ziarullumina.ro "View source site") | 23.693.901 | 271.607 | 13,17% (161.249) | 168 MB | 59 MB [▼Download](https://drive.google.com/open?id=1mpg7qaLH1__XWTzLUELO3LqmBrUZqNzs "Download compressed file")
+gazeta-de-cluj [➭](https://gazetadecluj.ro/stiri/stiri-cluj "View source site") | 25.772.022 | 320.891 | 14,09% (172.503) | 171 MB | 59 MB [▼Download](https://drive.google.com/open?id=1awJVQZzRvoQ6NNua2dGLWnlMPGDGcDuc "Download compressed file")
+bestseller-md [➭](https://www.bestseller.md "View source site") | 27.766.289 | 348.555 | 18,01% (220.517) | 171 MB | 63 MB [▼Download](https://drive.google.com/open?id=1PvUXcnvPo6dOyA8L6lCuqbsAvlWp3BeV "Download compressed file")
+archive-org [➭](https://archive.org/ "View source site") | 32.418.839 | 761.252 | 24,58% (300.945) | 210 MB | 77 MB [▼Download](https://drive.google.com/open?id=18NoxsiiMD1bclaTFPhKM_X94ziDRQ-Cu "Download compressed file")
+dcep [➭](https://wt-public.emm4u.eu/Resources/DCEP-2013/DCEP-Download-Page.html "View source site") | 34.534.679 | 174.371 | 6,75% (82.655) | 262 MB | 71 MB [▼Download](https://drive.google.com/open?id=1SJsMPS_8UuYDx1KerZI8uZ-AUN0JnvZx "Download compressed file")
+bzi [➭](https://www.bzi.ro/arhiva "View source site") | 42.923.167 | 289.744 | 13,96% (170.975) | 301 MB | 105 MB [▼Download](https://drive.google.com/open?id=1kDHgid2dNdEL9oYQSQJiCjBAw4r9gFLQ "Download compressed file")
+ru-101-books [➭](http://www.101books.ru/ "View source site") | 87.936.969 | 706.772 | 24,83% (303.991) | 534 MB | 199 MB [▼Download](https://drive.google.com/open?id=1Hlbu0i8dgKjDhXL-LYZP-eEy9dEIshoB "Download compressed file")
+dezbateri-parlamentare [➭](http://www.cdep.ro/pls/steno/steno.home?idl=1 "View source site") | 109.244.724 | 250.406 | 14,22% (174.140) | 764 MB | 227 MB [▼Download](https://drive.google.com/open?id=1QDZfoV_ftVKRTPEDpkr3grcxYDnX_ULU "Download compressed file")
+jurisprudenta [➭](https://www.jurisprudenta.com/jurisprudenta/ "View source site") | 114.208.968 | 285.542 | 11,02% (134.916) | 798 MB | 213 MB [▼Download](https://drive.google.com/open?id=1RLSVNJz8goCFg8LNzuCNCXcuxS-aoype "Download compressed file")
+just [➭](http://legislatie.just.ro/Public/RezultateCautare?page=1 "View source site") | 188.155.635 | 580.225 | 20,16% (246.794) | 1.998 MB | 349 MB [▼Download](https://drive.google.com/open?id=1o89XyGGpHeif3eRycfT_SZYHdUpautBO "Download compressed file")
+wiki-ro [➭](https://dumps.wikimedia.org/rowiki/latest/rowiki-latest-pages-meta-current.xml.bz2 "View source site") | 198.707.897 | 2.429.146 | 40,85% (500.213) | 1.441 MB | 341 MB [▼Download](https://drive.google.com/open?id=1UGxDkF_EzSOiie_vs8uio3_FSr6_SL-7 "Download compressed file")
+all-readme-rotex [➭](https://github.com/aleris/ReadME-RoTex-Corpus-Builder "View source site") | 972.227.108 | 4.170.793 | 61,58% (754.011) | 7.399 MB | 1.979 MB [▼Download](https://drive.google.com/open?id=1A-emtgS2QOjDtGNxR6VHgsM_EZvzOdvE "Download compressed file")
+
+(¹) Total number of words in the source, where a word is considered any sequence of letters, even if it is not present 
+in DEX.
+
+(²) Total number of types in the source, or unique words. Theoretically this should be under the number of word forms 
+in DEX, however in some cases, where the source has fragmented sections with words from other languages, 
+like in wikipedia the number can be higher.
+
+(³) A percentage of words covered from the source from the total word forms in DEX. For example DEX has 
+approximately 1.2 millions word forms and if in the source we have 130.000 unique words then the coverage is
+about 11%.
 
 # How it works
 This tool *automatically* downloads, extracts, cleans and assemble the resulting text archives. 
@@ -37,48 +80,6 @@ main time consumers being the download (especially with many small items) and PD
 
 The built corpus is available for download as .tar.gz files for each individual source 
 and as a single big file containing the entire text.
-
-# Sources
-
-Sources ordered by total word count in document:
-
-Source | Word Count (¹) | Types Count (²) | DEX Coverage (³) | Uncompressed size | Compressed size
---- | --- | --- | --- | --- | ---
-artapolitica [➭](http://www.tion.ro/date/2019 "View source site") | 716.033 | 58.262 | 3,95% (48.418) | 4 MB | 1 MB [▼Download](https://drive.google.com/open?id=1RdJpRz88tlvEb6f5gBL5ovEWf54dU2W2 "Download compressed file")
-biblior [➭](http://biblior.net/carti "View source site") | 1.181.820 | 89.642 | 5,9% (72.298) | 7 MB | 2 MB [▼Download](https://drive.google.com/open?id=1nPpJdXbCAL13a2yIM9PgJiIXxZeRzGDF "Download compressed file")
-uzp [➭](https://uzp.org.ro "View source site") | 1.553.850 | 111.147 | 6,5% (79.622) | 10 MB | 4 MB [▼Download](https://drive.google.com/open?id=1ST5FJ7AzUk-94cdT4tBQvCOhCyJ26HOn "Download compressed file")
-carti-bune-gratis [➭](http://cartibunegratis.blogspot.ro "View source site") | 1.619.354 | 76.103 | 5,54% (67.833) | 9 MB | 3 MB [▼Download](https://drive.google.com/open?id=1DwnMXUsvbcLZSZPMLJ9GB9HEC9Mv1_c3 "Download compressed file")
-historica-cluj [➭](http://www.historica-cluj.ro/menu/arhiva_anuar.php "View source site") | 2.542.106 | 150.298 | 6,55% (80.157) | 18 MB | 6 MB [▼Download](https://drive.google.com/open?id=1FW4S4Mv0OriX8zMyNZzrCU3gc0ajmXLg "Download compressed file")
-destine-literale [➭](http://www.scriitoriiromani.com/DestineLiterare.html "View source site") | 4.325.392 | 270.410 | 11,29% (138.233) | 27 MB | 11 MB [▼Download](https://drive.google.com/open?id=1cBnAKvgMihuG_xiL3jTO8_bBTY9R43Ri "Download compressed file")
-certitudinea [➭](http://www.certitudinea.ro "View source site") | 4.338.169 | 117.207 | 6,95% (85.152) | 28 MB | 11 MB [▼Download](https://drive.google.com/open?id=1X6C3RGSRm4zfSBOGotiKwJOjMeprdTFa "Download compressed file")
-paul-goma [➭](http://www.paulgoma.com/lista-completa "View source site") | 6.603.181 | 254.228 | 10,82% (132.469) | 42 MB | 16 MB [▼Download](https://drive.google.com/open?id=1DPEssf7eHCml0jCsvGORsfHEhaAWyNyj "Download compressed file")
-rudolf-steiner [➭](http://www.spiritualrs.net/Lucrari_GA.html "View source site") | 7.678.761 | 106.878 | 5,52% (67.549) | 50 MB | 15 MB [▼Download](https://drive.google.com/open?id=1vbVfDe2Dv774kOyl18AYxw7zn5-_SXFb "Download compressed file")
-litera-net [➭](http://editura.liternet.ro/catalog/1/Romana/toate-cartile.html "View source site") | 8.591.552 | 263.844 | 14,88% (182.250) | 54 MB | 21 MB [▼Download](https://drive.google.com/open?id=1jbAjDqiiM9axfnA8k-afLnuweOSAEdOh "Download compressed file")
-napoca-news [➭](http://www.napocanews.ro/ "View source site") | 12.376.780 | 297.076 | 13,07% (159.974) | 83 MB | 32 MB [▼Download](https://drive.google.com/open?id=18GDMbRrGAVoykMajbuGvDLWgpbult8_p "Download compressed file")
-biblioteca-digitala-ase [➭](http://www.biblioteca-digitala.ase.ro/biblioteca "View source site") | 16.105.049 | 256.196 | 10,73% (131.383) | 121 MB | 37 MB [▼Download](https://drive.google.com/open?id=1VPg0vrflrCQWS6coytOZR2LndjXroFQM "Download compressed file")
-biblioteca-pe-mobil [➭](https://scoala.bibliotecapemobil.ro "View source site") | 19.299.099 | 419.782 | 17,09% (209.309) | 116 MB | 44 MB [▼Download](https://drive.google.com/open?id=1PUef4yUwYVsFaJrQzc6_u7909NgJEUeA "Download compressed file")
-ziarul-lumina [➭](http://ziarullumina.ro "View source site") | 23.693.901 | 271.607 | 13,17% (161.249) | 168 MB | 59 MB [▼Download](https://drive.google.com/open?id=1mpg7qaLH1__XWTzLUELO3LqmBrUZqNzs "Download compressed file")
-gazeta-de-cluj [➭](https://gazetadecluj.ro/stiri/stiri-cluj "View source site") | 25.772.022 | 320.891 | 14,09% (172.503) | 171 MB | 59 MB [▼Download](https://drive.google.com/open?id=1awJVQZzRvoQ6NNua2dGLWnlMPGDGcDuc "Download compressed file")
-bestseller-md [➭](https://www.bestseller.md "View source site") | 27.766.289 | 348.555 | 18,01% (220.517) | 171 MB | 63 MB [▼Download](https://drive.google.com/open?id=1PvUXcnvPo6dOyA8L6lCuqbsAvlWp3BeV "Download compressed file")
-dcep [➭](https://wt-public.emm4u.eu/Resources/DCEP-2013/DCEP-Download-Page.html "View source site") | 34.534.679 | 174.371 | 6,75% (82.655) | 262 MB | 71 MB [▼Download](https://drive.google.com/open?id=1SJsMPS_8UuYDx1KerZI8uZ-AUN0JnvZx "Download compressed file")
-bzi [➭](https://www.bzi.ro/arhiva "View source site") | 42.923.167 | 289.744 | 13,96% (170.975) | 301 MB | 105 MB [▼Download](https://drive.google.com/open?id=1kDHgid2dNdEL9oYQSQJiCjBAw4r9gFLQ "Download compressed file")
-ru-101-books [➭](http://www.101books.ru/ "View source site") | 87.936.969 | 706.772 | 24,83% (303.991) | 534 MB | 199 MB [▼Download](https://drive.google.com/open?id=1Hlbu0i8dgKjDhXL-LYZP-eEy9dEIshoB "Download compressed file")
-dezbateri-parlamentare [➭](http://www.cdep.ro/pls/steno/steno.home?idl=1 "View source site") | 109.244.724 | 250.406 | 14,22% (174.140) | 764 MB | 227 MB [▼Download](https://drive.google.com/open?id=1QDZfoV_ftVKRTPEDpkr3grcxYDnX_ULU "Download compressed file")
-jurisprudenta [➭](https://www.jurisprudenta.com/jurisprudenta/ "View source site") | 114.208.968 | 285.542 | 11,02% (134.916) | 798 MB | 213 MB [▼Download](https://drive.google.com/open?id=1RLSVNJz8goCFg8LNzuCNCXcuxS-aoype "Download compressed file")
-just [➭](http://legislatie.just.ro/Public/RezultateCautare?page=1 "View source site") | 188.155.635 | 580.225 | 20,16% (246.794) | 1.998 MB | 349 MB [▼Download](https://drive.google.com/open?id=1o89XyGGpHeif3eRycfT_SZYHdUpautBO "Download compressed file")
-wiki-ro [➭](https://dumps.wikimedia.org/rowiki/latest/rowiki-latest-pages-meta-current.xml.bz2 "View source site") | 198.707.897 | 2.429.146 | 40,85% (500.213) | 1.441 MB | 341 MB [▼Download](https://drive.google.com/open?id=1UGxDkF_EzSOiie_vs8uio3_FSr6_SL-7 "Download compressed file")
-all-readme-rotex [➭](https://github.com/aleris/ReadME-RoTex-Corpus-Builder "View source site") | 939.875.397 | 3.860.884 | 59,52% (728.780) | 7.188 MB | 1.901 MB [▼Download](https://drive.google.com/open?id=1A-emtgS2QOjDtGNxR6VHgsM_EZvzOdvE "Download compressed file")
-
-(¹) Total number of words in the source, where a word is considered any sequence of letters, even if it is not present 
-in DEX.
-
-(²) Total number of types in the source, or unique words. Theoretically this should be under the number of word forms 
-in DEX, however in some cases, where the source has fragmented sections with words from other languages, 
-like in wikipedia the number can be higher.
-
-(³) A percentage of words covered from the source from the total word forms in DEX. For example DEX has 
-approximately 1.2 millions word forms and if in the source we have 130.000 unique words then the coverage is
-about 11%.
 
 # Prerequisites
 
@@ -106,6 +107,7 @@ There are multiple ways to make this tool better, any help is highly appreciated
 
 # TODO
 
+* https://archive.org/download/texts?and%5B%5D=languageSorter%3A%22Romanian%22&sort=-downloads
 * http://romania-inedit.3xforum.ro/topic/83/Carti_in_limba_romana/
 
 Sources to be considered for inclusion:
