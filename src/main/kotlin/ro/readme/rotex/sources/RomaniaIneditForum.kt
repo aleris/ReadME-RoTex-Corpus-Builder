@@ -37,7 +37,9 @@ class RomaniaIneditForum: Source() {
         val pageCount = getPageCount(firstPageDoc)
 
         for (page in 1..pageCount) {
-            println("Topic page $page of $pageCount")
+            println()
+            println("[PAGE] Topic page $page of $pageCount")
+            println()
             val pageDoc = Jsoup
                 .connect("http://romania-inedit.3xforum.ro/topic/83/Carti_in_limba_romana/$page/")
                 .timeout(60 * 1000)
@@ -45,16 +47,27 @@ class RomaniaIneditForum: Source() {
             val topics = pageDoc.select(".puntopic")
             for (topic in topics) {
                 val link = topic.select("a").first()
-                downloadFromTopic(link, override)
+                downloadFromTopic(page, link, override)
             }
         }
     }
 
-    private fun downloadFromTopic(link: Element, override: Boolean) {
+    private var skip = true
+    private fun downloadFromTopic(mainPage: Int, link: Element, override: Boolean) {
         val topicFirstPageHref = link.attr("href")
-        println("Topic $topicFirstPageHref")
+        println()
+        println("[TOPIC] Topic $topicFirstPageHref, main page $mainPage")
+        println()
+        if (skip) {
+            println("skipping...")
+            println()
+            if (topicFirstPageHref.contains("Science_Fiction")) {
+                skip = false
+            }
+            return
+        }
         if (topicFirstPageHref.contains("B_Revista_REBUS")) {
-            println("skipping B_Revista_REBUS")
+            println("skipping B_Revista_REBUS ... ")
             return
         }
         val topicUrl = "http://romania-inedit.3xforum.ro$topicFirstPageHref"
@@ -64,7 +77,9 @@ class RomaniaIneditForum: Source() {
             .get()
         val pageCount = getPageCount(postDoc)
         for (page in 1..pageCount) {
-            println("Post page $page of $pageCount in topic $topicFirstPageHref")
+            println()
+            println("[POST] Post page $page of $pageCount in topic $topicFirstPageHref, main page $mainPage")
+            println()
             val pageHref = topicUrl.replace("/1/", "/$page/")
             downloadFromTopicPage(pageHref, override)
         }

@@ -1,7 +1,7 @@
 # ReadME RoTex Corpus Builder
 
-![Word Count](https://img.shields.io/badge/words-972.227.108-orange.svg)
-![Dex Types Coverage](https://img.shields.io/badge/dex%20coverage-61.58%25-yellow.svg)
+![Word Count](https://img.shields.io/badge/words-990.161.350-orange.svg)
+![Dex Types Coverage](https://img.shields.io/badge/dex%20coverage-61.9%25-yellow.svg)
 [![Build Status](https://travis-ci.com/aleris/ReadME-RoTex-Corpus-Builder.svg?branch=master)](https://travis-ci.com/aleris/ReadME-RoTex-Corpus-Builder)
 
 # Description
@@ -34,6 +34,7 @@ rudolf-steiner [➭](http://www.spiritualrs.net/Lucrari_GA.html "View source sit
 litera-net [➭](http://editura.liternet.ro/catalog/1/Romana/toate-cartile.html "View source site") | 8.591.552 | 263.844 | 14,88% (182.250) | 54 MB | 21 MB [▼Download](https://drive.google.com/open?id=1jbAjDqiiM9axfnA8k-afLnuweOSAEdOh "Download compressed file")
 napoca-news [➭](http://www.napocanews.ro/ "View source site") | 12.376.780 | 297.076 | 13,07% (159.974) | 83 MB | 32 MB [▼Download](https://drive.google.com/open?id=18GDMbRrGAVoykMajbuGvDLWgpbult8_p "Download compressed file")
 biblioteca-digitala-ase [➭](http://www.biblioteca-digitala.ase.ro/biblioteca "View source site") | 16.105.049 | 256.196 | 10,73% (131.383) | 121 MB | 37 MB [▼Download](https://drive.google.com/open?id=1VPg0vrflrCQWS6coytOZR2LndjXroFQM "Download compressed file")
+jrq-aquis [➭](https://ec.europa.eu/jrc/en/language-technologies/jrc-acquis "View source site") | 17.934.242 | 294.193 | 7,62% (93.247) | 140 MB | 44 MB [▼Download](https://drive.google.com/open?id=1VoaAb7x3Y2mnJqiGeMnHJXkhQv7QZ2tC "Download compressed file")
 biblioteca-pe-mobil [➭](https://scoala.bibliotecapemobil.ro "View source site") | 19.299.099 | 419.782 | 17,09% (209.309) | 116 MB | 44 MB [▼Download](https://drive.google.com/open?id=1PUef4yUwYVsFaJrQzc6_u7909NgJEUeA "Download compressed file")
 ziarul-lumina [➭](http://ziarullumina.ro "View source site") | 23.693.901 | 271.607 | 13,17% (161.249) | 168 MB | 59 MB [▼Download](https://drive.google.com/open?id=1mpg7qaLH1__XWTzLUELO3LqmBrUZqNzs "Download compressed file")
 gazeta-de-cluj [➭](https://gazetadecluj.ro/stiri/stiri-cluj "View source site") | 25.772.022 | 320.891 | 14,09% (172.503) | 171 MB | 59 MB [▼Download](https://drive.google.com/open?id=1awJVQZzRvoQ6NNua2dGLWnlMPGDGcDuc "Download compressed file")
@@ -46,7 +47,7 @@ dezbateri-parlamentare [➭](http://www.cdep.ro/pls/steno/steno.home?idl=1 "View
 jurisprudenta [➭](https://www.jurisprudenta.com/jurisprudenta/ "View source site") | 114.208.968 | 285.542 | 11,02% (134.916) | 798 MB | 213 MB [▼Download](https://drive.google.com/open?id=1RLSVNJz8goCFg8LNzuCNCXcuxS-aoype "Download compressed file")
 just [➭](http://legislatie.just.ro/Public/RezultateCautare?page=1 "View source site") | 188.155.635 | 580.225 | 20,16% (246.794) | 1.998 MB | 349 MB [▼Download](https://drive.google.com/open?id=1o89XyGGpHeif3eRycfT_SZYHdUpautBO "Download compressed file")
 wiki-ro [➭](https://dumps.wikimedia.org/rowiki/latest/rowiki-latest-pages-meta-current.xml.bz2 "View source site") | 198.707.897 | 2.429.146 | 40,85% (500.213) | 1.441 MB | 341 MB [▼Download](https://drive.google.com/open?id=1UGxDkF_EzSOiie_vs8uio3_FSr6_SL-7 "Download compressed file")
-all-readme-rotex [➭](https://github.com/aleris/ReadME-RoTex-Corpus-Builder "View source site") | 972.227.108 | 4.170.793 | 61,58% (754.011) | 7.399 MB | 1.979 MB [▼Download](https://drive.google.com/open?id=1A-emtgS2QOjDtGNxR6VHgsM_EZvzOdvE "Download compressed file")
+all-readme-rotex [➭](https://github.com/aleris/ReadME-RoTex-Corpus-Builder "View source site") | 990.161.350 | 4.286.399 | 61,9% (757.862) | 7.540 MB | 2.024 MB [▼Download](https://drive.google.com/open?id=1A-emtgS2QOjDtGNxR6VHgsM_EZvzOdvE "Download compressed file")
 
 (¹) Total number of words in the source, where a word is considered any sequence of letters, even if it is not present 
 in DEX.
@@ -108,7 +109,6 @@ There are multiple ways to make this tool better, any help is highly appreciated
 
 # TODO
 
-* https://archive.org/download/texts?and%5B%5D=languageSorter%3A%22Romanian%22&sort=-downloads
 * http://romania-inedit.3xforum.ro/topic/83/Carti_in_limba_romana/
 
 Sources to be considered for inclusion:
