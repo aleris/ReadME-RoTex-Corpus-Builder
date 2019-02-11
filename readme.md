@@ -113,18 +113,8 @@ There are multiple ways to make this tool better, any help is highly appreciated
 
 Sources to be considered for inclusion:
 
-* https://bunavestire.ca/revista-candela/
-* http://colegiulasachi.uv.ro/scolara.html
-* http://www.romlit.ro/index.pl/arhiva_2018_ro
-* https://www.balcanii.ro/2018/11/
-* https://radiojurnalspiritual.ro/carti-alese/
-* http://www.umft.ro/carti-in-format-electronic--medicina-generala_184
-* http://www.dacoromania.inst-puscariu.ro/
-* https://uituculblog.wordpress.com/citeste-online/carti-pdf/
 * http://www.cnaa.md/theses/
 * https://eur-lex.europa.eu/homepage.html
-* http://www.ceeol.com/
-* http://www.banaterra.eu/biblioteca/
 
 # Discarded Sources
 
@@ -137,5 +127,15 @@ Below are sources that were considered for inclusion but rejected for various re
 * http://www.respiro.org/ebook.html (only a few in Romanian, fragmented)
 * http://www.cimec.ro/Biblioteca-Digitala/Biblioteca.html (too many images, very fragmented text)
 * https://rmj.com.ro/rmj-vol-lvi-nr-3-an-2009/ (protected for most of recent years, fragmented document types, not that much text)
-* http://www.tion.ro/date/2019 (under 1 mil words)
-
+* http://www.tion.ro/date/2019 (under 1 mil words - implemented)
+* https://bunavestire.ca/revista-candela/ (too small)
+* http://colegiulasachi.uv.ro/scolara.html (too small)
+* http://www.romlit.ro/index.pl/arhiva_2018_ro (not available anymore)
+* http://www.banaterra.eu/biblioteca/ (not available anymore)
+* http://www.umft.ro/carti-in-format-electronic--medicina-generala_184 (too small)
+* http://www.dacoromania.inst-puscariu.ro/ (too small)
+* https://uituculblog.wordpress.com/citeste-online/carti-pdf/ (too small)
+* http://www.ceeol.com/ (not available for download)
+* https://www.balcanii.ro/2018/11/ (too small)
+* https://radiojurnalspiritual.ro/carti-alese/ (too small)
+* https://ec.europa.eu/jrc/en/language-technologies/jrc-acquis (https://wt-public.emm4u.eu/Acquis/JRC-Acquis.3.0/corpus/) (too small - implemented)
