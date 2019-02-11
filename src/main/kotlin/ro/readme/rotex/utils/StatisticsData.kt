@@ -6,6 +6,7 @@ data class StatisticsData(val source: Source,
                           val fileSizeUncompressed: Long,
                           val fileSizeCompressed: Long,
                           val totalWordCount: Int,
+                          val totalWordsInDexCount: Int,
                           val wordSet: HashSet<String>
                           ) {
     fun printLines() {
@@ -15,6 +16,7 @@ data class StatisticsData(val source: Source,
         println("Text file size (uncompressed): ${TextUtils.formatDecimal(fileSizeUncompressed / (1000 * 1000))} MB (${TextUtils.formatDecimal(fileSizeUncompressed)} bytes)")
         println("Text file size (compressed): ${TextUtils.formatDecimal(fileSizeCompressed / (1000 * 1000))} MB (${TextUtils.formatDecimal(fileSizeCompressed)} bytes)")
         println("Total words count: ${TextUtils.formatDecimal(totalWordCount)}")
+        println("Total words count: ${TextUtils.formatDecimal(totalWordsInDexCount)}")
         val totalTypesCount = wordSet.size
         println("Total types (unique words) count: ${TextUtils.formatDecimal(totalTypesCount)}")
         val typesCountAlsoInDex = wordSet.count { DexDictionary.containsWord(it) }
@@ -34,7 +36,7 @@ data class StatisticsData(val source: Source,
     fun printMarkDownRow() {
         print("${source.sourceKey} [➭](${source.originalLink} \"View source site\")")
         print(" | ")
-        print(TextUtils.formatDecimal(totalWordCount))
+        print("${TextUtils.formatDecimal(totalWordCount)} (${TextUtils.formatDecimal(totalWordsInDexCount)})")
         print(" | ")
         val totalTypesCount = wordSet.size
         print(TextUtils.formatDecimal(totalTypesCount))

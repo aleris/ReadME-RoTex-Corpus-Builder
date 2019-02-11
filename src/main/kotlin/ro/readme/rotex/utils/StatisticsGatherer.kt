@@ -56,6 +56,7 @@ class StatisticsGatherer {
         val compressedFileSize = compressedTextFile.length()
 
         var wordCount = 0
+        var inDex = 0
 
         val wordSet = HashSet<String>()
         FileReader(textFile).use { fileReader ->
@@ -68,6 +69,7 @@ class StatisticsGatherer {
                             .map { it.getCoveredText(lineString) }
                             .filter { TextUtils.hasOnlyLetters(it) }
                         wordCount += allLettersOnly.size
+                        inDex += allLettersOnly.filter { DexDictionary.containsWord(it) }.size
                         wordSet.addAll(allLettersOnly)
                         lineString = reader.readLine()
                     }
@@ -79,6 +81,7 @@ class StatisticsGatherer {
             fileSize,
             compressedFileSize,
             wordCount,
+            inDex,
             wordSet)
     }
 
@@ -86,11 +89,13 @@ class StatisticsGatherer {
         var fileSizeUncompressed = 0L
         var fileSizeCompressed = 0L
         var totalWordCount = 0
+        var inDex = 0
         val dexWordSet = HashSet<String>()
         for (d in list) {
             fileSizeUncompressed += d.fileSizeUncompressed
             fileSizeCompressed += d.fileSizeCompressed
             totalWordCount += d.totalWordCount
+            inDex += d.totalWordsInDexCount
             dexWordSet.addAll(d.wordSet)
         }
 
@@ -99,6 +104,7 @@ class StatisticsGatherer {
             fileSizeUncompressed,
             fileSizeCompressed,
             totalWordCount,
+            inDex,
             dexWordSet)
     }
 }
