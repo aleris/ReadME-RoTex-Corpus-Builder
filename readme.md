@@ -83,6 +83,12 @@ main time consumers being the download (especially with many small items) and PD
 The built corpus is available for download as .tar.gz files for each individual source 
 and as a single big file containing the entire text.
 
+_Note: In a previous version the text was also run through a sentence builder which recovered sentences from 
+broken text. This is not applied any more to keep the text as close to the original as possible. 
+Have a look at `BufferedSentenceReader` if you want to apply the sentence builder yourself, is working pretty well 
+(see unit tests) but it fails in some cases, as is not using any named entity detection and the abbreviation
+ detector is rule based._
+
 # Prerequisites
 
 * *[DEX Online](https://github.com/dexonline/dexonline)* - A MariaDB database with DEX needs to be available 
