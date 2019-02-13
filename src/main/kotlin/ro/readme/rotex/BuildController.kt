@@ -70,7 +70,6 @@ class BuildController {
 //            RomaniaIneditForum()
 //        ).map { BuildSource(it, BuildSourceOptions(checkOriginalDeep = true)) })
 //         , BuildSourceOptions(checkOriginalDeep = true)
-
         runBuildSources(allBuildSources)
     }
 
@@ -156,6 +155,4 @@ class BuildController {
             println("OK")
         }
     }
-
-
 }

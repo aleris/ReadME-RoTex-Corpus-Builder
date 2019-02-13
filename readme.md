@@ -1,7 +1,7 @@
 # ReadME RoTex Corpus Builder
 
-![Word Count](https://img.shields.io/badge/words-990.161.350-orange.svg)
-![Dex Types Coverage](https://img.shields.io/badge/dex%20coverage-61.9%25-yellow.svg)
+![Word Count](https://img.shields.io/badge/words-1.051.219.439-orange.svg)
+![Dex Types Coverage](https://img.shields.io/badge/dex%20coverage-62.22%25-yellow.svg)
 [![Build Status](https://travis-ci.com/aleris/ReadME-RoTex-Corpus-Builder.svg?branch=master)](https://travis-ci.com/aleris/ReadME-RoTex-Corpus-Builder)
 
 # Description
@@ -42,12 +42,13 @@ bestseller-md [➭](https://www.bestseller.md "View source site") | 27.766.289 (
 archive-org [➭](https://archive.org/ "View source site") | 32.418.839 (30.728.463) | 761.252 | 24,58% (300.945) | 210 MB | 77 MB [▼Download](https://drive.google.com/open?id=18NoxsiiMD1bclaTFPhKM_X94ziDRQ-Cu "Download compressed file")
 dcep [➭](https://wt-public.emm4u.eu/Resources/DCEP-2013/DCEP-Download-Page.html "View source site") | 34.534.679 (30.362.284) | 174.371 | 6,75% (82.655) | 262 MB | 71 MB [▼Download](https://drive.google.com/open?id=1SJsMPS_8UuYDx1KerZI8uZ-AUN0JnvZx "Download compressed file")
 bzi [➭](https://www.bzi.ro/arhiva "View source site") | 42.923.167 (40.427.447) | 289.744 | 13,96% (170.975) | 301 MB | 105 MB [▼Download](https://drive.google.com/open?id=1kDHgid2dNdEL9oYQSQJiCjBAw4r9gFLQ "Download compressed file")
+dgt-aquis [➭](https://ec.europa.eu/jrc/en/language-technologies/dgt-acquis "View source site") | 61.058.089 (53.111.759) | 466.234 | 11,04% (135.226) | 467 MB | 108 MB [▼Download](https://drive.google.com/open?id=1GUjlUH2_N7NKetAPjDT3BTk0VKPwy7ll "Download compressed file")
 ru-101-books [➭](http://www.101books.ru/ "View source site") | 87.936.969 (83.668.310) | 706.772 | 24,83% (303.991) | 534 MB | 199 MB [▼Download](https://drive.google.com/open?id=1Hlbu0i8dgKjDhXL-LYZP-eEy9dEIshoB "Download compressed file")
 dezbateri-parlamentare [➭](http://www.cdep.ro/pls/steno/steno.home?idl=1 "View source site") | 109.244.724 (106.563.919) | 250.406 | 14,22% (174.140) | 764 MB | 227 MB [▼Download](https://drive.google.com/open?id=1QDZfoV_ftVKRTPEDpkr3grcxYDnX_ULU "Download compressed file")
 jurisprudenta [➭](https://www.jurisprudenta.com/jurisprudenta/ "View source site") | 114.208.968 (107.719.873) | 285.542 | 11,02% (134.916) | 798 MB | 213 MB [▼Download](https://drive.google.com/open?id=1RLSVNJz8goCFg8LNzuCNCXcuxS-aoype "Download compressed file")
 just [➭](http://legislatie.just.ro/Public/RezultateCautare?page=1 "View source site") | 188.155.635 (178.843.784) | 580.225 | 20,16% (246.794) | 1.998 MB | 349 MB [▼Download](https://drive.google.com/open?id=1o89XyGGpHeif3eRycfT_SZYHdUpautBO "Download compressed file")
 wiki-ro [➭](https://dumps.wikimedia.org/rowiki/latest/rowiki-latest-pages-meta-current.xml.bz2 "View source site") | 198.707.897 (161.989.666) | 2.429.146 | 40,85% (500.213) | 1.441 MB | 341 MB [▼Download](https://drive.google.com/open?id=1UGxDkF_EzSOiie_vs8uio3_FSr6_SL-7 "Download compressed file")
-all-readme-rotex [➭](https://github.com/aleris/ReadME-RoTex-Corpus-Builder "View source site") | 990.161.350 (905.865.045) | 4.286.399 | 61,9% (757.862) | 7.540 MB | 2.024 MB [▼Download](https://drive.google.com/open?id=1A-emtgS2QOjDtGNxR6VHgsM_EZvzOdvE "Download compressed file")
+all-readme-rotex [➭](https://github.com/aleris/ReadME-RoTex-Corpus-Builder "View source site") | 1.051.219.439 (958.976.804) | 4.467.831 | 62,22% (761.775) | 8.007 MB | 2.132 MB [▼Download](https://drive.google.com/open?id=1A-emtgS2QOjDtGNxR6VHgsM_EZvzOdvE "Download compressed file")
 
 (¹) Total number of words in the source, where a word is considered any sequence of letters, even if it is not present 
 in DEX. In parenthesis is shown the total count of words also found in DEX as a word form.
@@ -144,4 +145,3 @@ Below are sources that were considered for inclusion but rejected for various re
 * http://www.ceeol.com/ (not available for download)
 * https://www.balcanii.ro/2018/11/ (too small)
 * https://radiojurnalspiritual.ro/carti-alese/ (too small)
-* https://ec.europa.eu/jrc/en/language-technologies/jrc-acquis (https://wt-public.emm4u.eu/Acquis/JRC-Acquis.3.0/corpus/) (too small - implemented)

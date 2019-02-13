@@ -6,10 +6,9 @@ import ro.readme.rotex.utils.PathUtils
 import java.util.zip.ZipInputStream
 
 class DgtAquis: Source() {
-    override val enabled = false
     override val sourceKey = "dgt-aquis"
     override val originalLink = "https://ec.europa.eu/jrc/en/language-technologies/dgt-acquis"
-    override val downloadLink = ""
+    override val downloadLink = "https://drive.google.com/open?id=1GUjlUH2_N7NKetAPjDT3BTk0VKPwy7ll"
 
     override fun downloadOriginal(override: Boolean) {
         val href = "https://ec.europa.eu/jrc/en/language-technologies/dgt-acquis/da1-ft"
@@ -44,14 +43,15 @@ class DgtAquis: Source() {
     override fun extractText(override: Boolean) {
         val outputFilePath = PathUtils.textFilePath(sourceKey)
         skipFileIfExists(outputFilePath, override) {
-            val originalDirectoryPath = PathUtils.originalDirectoryPath(sourceKey)
-            originalDirectoryPath.toFile()
-                .walk()
-                .filter { it.isFile }
-                .filter { it.extension == "zip" }
-                .forEach { originalFile ->
-                    print("${originalFile.name} ... ")
-                    outputFilePath.toFile().outputStream().use { outputStream ->
+            outputFilePath.toFile().outputStream().use { outputStream ->
+                val originalDirectoryPath = PathUtils.originalDirectoryPath(sourceKey)
+                originalDirectoryPath.toFile()
+                    .walk()
+                    .filter { it.isFile }
+                    .filter { it.extension == "zip" }
+                    .sorted()
+                    .forEach { originalFile ->
+                        println("${originalFile.name} ... ")
                         originalFile.inputStream().use { fileInputStream ->
                             ZipInputStream(fileInputStream).use { compressedStream ->
                                 var entry = compressedStream.nextEntry
@@ -66,7 +66,7 @@ class DgtAquis: Source() {
                             }
                         }
                     }
-                }
+            }
             println("OK")
         }
     }
